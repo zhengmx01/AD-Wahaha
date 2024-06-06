@@ -323,6 +323,7 @@ startGame.onclick = function () {
         fiveTopBody.classList.add("five-top-bodyt");
         // wenhao.classList.add("wenhaot");
         fiveTopQpao.classList.add("five-qipaot");
+        wenhao.classList.add("five-textt");
     },31000)
     setTimeout(function () {
         fiveBottomBg.classList.add("five-bottom-bgt");
