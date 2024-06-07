@@ -40,12 +40,14 @@ var qp2Img = document.getElementsByClassName("qipao2-img")[0];
 var t2Img = document.getElementsByClassName("text-img2")[0];
 var qp3Img = document.getElementsByClassName("qipao3-img")[0];
 var t3Img = document.getElementsByClassName("text-img3")[0];
+var audio = document.getElementsByClassName("audio")[0];
 
 setTimeout(function () {
     onePage.style.display = "none";
 
 }, 3500)
 setTimeout(function () {
+
     startGame.style.opacity = "1";
     startGame.classList.add("start-gamet");
 }, 3500)
@@ -212,62 +214,94 @@ var nineText = document.getElementsByClassName("nine-text")[0];
 var logo = document.getElementsByClassName("logo")[0];
 
 
+var musicAudio = document.getElementsByClassName("music-audio")[0]
+// 获取控制音频图片 控件
+var musicControls = document.getElementsByClassName('Music-controls')[0];
+// 点击进行播放音乐和暂停音乐
+// 定义一个变量用于判断或者暂停音乐
+var count = 1;
+// 注意 给开始游戏加上 musicAudio.play()； count++;; 让页面点击开始游戏即播放音乐
+// musicControls.onclick = function () {
+//   // 判断，如果count == 0; 暂停播放音乐，并自动加一
+//   if (count == 0) {
+//     // 暂停音乐
+//     musicAudio.pause();
+//     count++;
+//     console.log(count);
+//   } else {
+//     // 开始播放音乐，并将count值还原
+//     musicAudio.play();
+//     count = 0;
+//     console.log(count);
+//   }
+// }
+
 
 
 
 
 startGame.onclick = function () {
+    if (count == 0) {
+        // 暂停音乐
+        musicAudio.pause();
+        count++;
+        console.log(count);
+      } else {
+        // 开始播放音乐，并将count值还原
+        musicAudio.play();
+        count = 0;
+        console.log(count);
+      }
     twoPage.style.display = "none";
     topImg.classList.add("top-imgt");
     setTimeout(function () {
         qp1Img.classList.add("qipao1-imgt");
-    }, 2000)
+    }, 500)
     setTimeout(function () {
         t1Img.classList.add("text-img1t");
-    }, 3000)
+    }, 1500)
     setTimeout(function () {
         qp3Img.classList.add("qipao3-imgt");
-    }, 4000)
+    }, 2000)
     setTimeout(function () {
         t3Img.classList.add("text-img3t");
-    }, 5000)
+    }, 3000)
     setTimeout(function () {
         qp2Img.classList.add("qipao3-imgt");
-    }, 6000)
+    }, 3500)
     setTimeout(function () {
         t2Img.classList.add("text-img2t");
-    }, 7000)
+    }, 4500)
     setTimeout(function () {
         botImg.classList.add("bottom-imgt");
-    }, 8000)
+    }, 5500)
     setTimeout(function () {
         perSon.classList.add("persont");
         gas.classList.add("gast");
-    }, 8000)
+    }, 6500)
     setTimeout(function () {
         qp4Img.classList.add("qipao4-imgt");
-
-    }, 11000)
+    }, 7500)
     setTimeout(function () {
         find.classList.add("findt");
-    }, 12000)
+    }, 8500)
 
     // 第四页
     setTimeout(function () {
         threePage.style.display = "none";
-    }, 13000)
+    }, 10000)
     setTimeout(function () {
         topBgt.classList.add("four-top-bgt");
 
-    }, 15000)
+    }, 10200)
     setTimeout(function () {
         topPop.style.opacity = "1";
         topPop.classList.add("four-top-peoplet");
-    }, 16000)
+    }, 11200)
     setTimeout(function () {
         topPop.style.opacity = "1";
         topPop.classList.add("four-top-peoplet");
-    }, 18000)
+    }, 12200)
     setTimeout(function () {
         dong1.style.opacity = "1";
         dong2.style.opacity = "1";
@@ -283,20 +317,20 @@ startGame.onclick = function () {
         dt2.classList.add("dong-text2t");
         dt3.classList.add("dong-text3t");
 
-    }, 18500)
+    }, 13200)
     setTimeout(function () {
         // fourQp.style.opacity = "1";
         fourQp.classList.add("four-qipaot");
-    }, 19500)
+    }, 14200)
     setTimeout(function () {
         fourTxt1.classList.add("four-text1t");
-    }, 21500)
+    }, 15200)
     setTimeout(function () {
         fourTxt2.classList.add("four-text2t");
-    }, 22500)
+    }, 16200)
     setTimeout(function () {
         fourTxt3.classList.add("four-text3t");
-    }, 23500)
+    }, 17200)
     setTimeout(function () {
         fourBottomBg.classList.add("four-bottom-bgt");
         zzz1.classList.add("zzz1t");
@@ -307,71 +341,74 @@ startGame.onclick = function () {
         dong6.classList.add("dong6t");
         dong7.classList.add("dong7t");
         dongText4.classList.add("dong-text4t");
-    }, 24500)
+    }, 18200)
     // 第五页
     setTimeout(function () {
         fourPage.style.display = "none";  
-    },28000)
+    },20500)
     setTimeout(function () {
         fiveTopBg.classList.add("five-top-bgt");
-    },29000)
+    },21500)
     setTimeout(function () {
         fiveTopHead.classList.add("five-top-headt");
         
-    },30000)
+    },22500)
     setTimeout(function () {
         fiveTopBody.classList.add("five-top-bodyt");
         // wenhao.classList.add("wenhaot");
         fiveTopQpao.classList.add("five-qipaot");
+        
+    },23500)
+    setTimeout(function () {
         wenhao.classList.add("five-textt");
-    },31000)
+    },24500)
     setTimeout(function () {
         fiveBottomBg.classList.add("five-bottom-bgt");
-    },32000)
+    },25500)
     setTimeout(function () {
         fiveBottomBody.classList.add("five-bottom-bodyt");
         fiveBottomHead.classList.add("five-bottom-headt");
         r2.classList.add("rt");
         fiveAD.classList.add("five-ADt");
-    },33000)
+    },26500)
     setTimeout(function () {
         fiveQiPao.classList.add("five-qipaot");
-    },34000)
+    },27500)
     setTimeout(function () {
         fiveText.classList.add("five-textt");
-    },35000)
+    },28500)
     // 第六页
     setTimeout(function(){
         fivePage.style.display = "none";
-    },37000)
+    },30500)
     setTimeout(function(){
         sixTopBg.classList.add("six-top-bgt");
         sixTopBg1.classList.add("six-top-bgt");
         sixTopBg2.classList.add("six-top-bgt");
         sixTopBg3.classList.add("six-top-bgt");
         sixTopAD.classList.add("six-top-bgt");
-    },38000)
+    },31500)
     setTimeout(function(){
         sixTopSu.classList.add("six-top-zhangt");
         sixTopzhang.classList.add("six-top-zhangt");
         sixTopZhangHead.classList.add("six-top-zhang-headt");
         r3.classList.add("rt");
-    },39000)
+    },32500)
     setTimeout(function(){
         sixQipao1.classList.add("six-qipao1t");
-    },40000)
+    },33500)
     setTimeout(function(){
         sixText1.classList.add("six-text1t");
-    },41000)
+    },34500)
     // setTimeout(function(){
     //     sixTopZhangHead.classList.add("six-top-zhangheadt");
     // },39000)
     setTimeout(function(){
         sixQipao2.classList.add("six-qipao2t");
-    },42000)
+    },35500)
     setTimeout(function(){
         sixText2.classList.add("six-text2t");
-    },43000)
+    },36500)
     setTimeout(function(){
         sixBottomBg.classList.add("six-bottom-bgt");
         star1.classList.add("start");
@@ -380,56 +417,56 @@ startGame.onclick = function () {
         star4.classList.add("start");
         star5.classList.add("start");
         star6.classList.add("start");
-    },44000)
+    },37500)
     setTimeout(function(){
         sixQipao3.classList.add("six-qipao3t");
-    },45000)
+    },38500)
     setTimeout(function(){
         sixText3.classList.add("six-text3t");
-    },46000)
+    },39500)
     setTimeout(function(){
         sixQipao4.classList.add("six-qipao4t");
-    },47000)
+    },40500)
     setTimeout(function(){
         sixText4.classList.add("six-text4t");
-    },48000)
+    },41500)
     setTimeout(function(){
         sixText5.classList.add("six-text5t");
-    },49000)
+    },42500)
     setTimeout(function(){
         sixPage.style.display = "none";
-    },50000)
+    },45000)
     // 第七页
     setTimeout(function(){
         sevenTopBg.classList.add("seven-top-bgt");
-    },52000)
+    },46000)
     setTimeout(function(){
         sevenPeople.classList.add("seven-peoplet");
         fengche.classList.add("fengchet");
         r.classList.add("rt");
-    },53000)
+    },47000)
     setTimeout(function(){
         sevenCenterBg1.classList.add("seven-center-bg1t");
-    },54000)
+    },48000)
     setTimeout(function(){
         sevenCenterBg2.classList.add("seven-center-bg2t");
-    },55000)
+    },49000)
     setTimeout(function(){
         sevenCenterBg3.classList.add("seven-center-bg3t");
-    },56000)
+    },50000)
     setTimeout(function(){
         sevenPeople1.classList.add("seven-people1t");
-    },57000)
+    },51000)
     setTimeout(function(){
         fengzheng.classList.add("fengzhengt");
         tuoluo.classList.add("tuoluot");
         r1.classList.add("rt");
         fengche2.classList.add("fengche2t");
         gunzi.classList.add("gunzit");
-    },58000)
+    },52000)
     setTimeout(function(){
         sevenbottomBg.classList.add("seven-bottom-bgt");
-    },59000)
+    },53000)
     setTimeout(function(){
         ad1.classList.add("flowerstar1");
         ad2.classList.add("flowerstar1");
@@ -454,7 +491,7 @@ startGame.onclick = function () {
         sstar9.classList.add("flowerstar");
         sstar10.classList.add("flowerstar");
         sstar11.classList.add("flowerstar");
-    },60000)
+    },54000)
     // setTimeout(function(){
         
 
@@ -462,45 +499,45 @@ startGame.onclick = function () {
     // 八
     setTimeout(function(){
         sevenPage.style.display = "none";
-    },63000)
+    },56000)
     setTimeout(function(){
         eightTopBg.classList.add("eight-top-bgt");
-    },64000)
+    },57000)
     setTimeout(function(){
         bird1.classList.add("birdt");
-    },65000)
+    },58000)
     setTimeout(function(){
         bird2.classList.add("birdt");
-    },65500)
+    },59000)
     setTimeout(function(){
         eightPeople.classList.add("eight-peoplet");
-    },66500)
+    },60000)
     setTimeout(function(){
         eightLeftBg.classList.add("eight-left-bgt");
-    },67500)
+    },61000)
     setTimeout(function(){
         eightLeftPeople.classList.add("eight-left-peoplet");
-    },68500)
+    },62000)
     setTimeout(function(){
         eightRightBg1.classList.add("eight-right-bgt");
         
-    },69500)
+    },63000)
     setTimeout(function(){
         dangong.classList.add("nineplay");
         eightFlower1.classList.add("flowerstar");
         eightStar1.classList.add("flowerstar");
-    },70500)
+    },64000)
     setTimeout(function(){
         eightRightBg2.classList.add("eight-right-bgt");
-    },71500)
+    },65000)
     setTimeout(function(){
         mianhua.classList.add("nineplay");
         eightFlower2.classList.add("flowerstar");
         eightStar2.classList.add("flowerstar");
-    },72500)
+    },66000)
     setTimeout(function(){
         eightRightBg3.classList.add("eight-right-bgt");
-    },73500)
+    },67000)
     setTimeout(function(){
         candy.classList.add("nineplay");
         candy1.classList.add("nineplay");
@@ -508,49 +545,50 @@ startGame.onclick = function () {
         eightStar4.classList.add("flowerstar");
         eightStar5.classList.add("flowerstar");
         eightStar6.classList.add("flowerstar");
-    },74500)
+    },68000)
     setTimeout(function(){
         eightPage.style.display = "none";
-    },76500)
-    // setTimeout(function(){
-    //     nineBg.classList.add("nine1t");
-    //     nineText.classList.add("nine1t");
-    //     logo.classList.add("nine1t");
-    //     oval1.classList.add("nine1t");
-    //     oval2.classList.add("nine1t");
-    //     nineAd1.classList.add("nine1t");
-    //     nineAd2.classList.add("nine1t");
-    //     nineAd3.classList.add("nine1t");
-        
-    //     nineStar1.classList.add("flowerstar");
-    //     nineStar2.classList.add("flowerstar");
-    //     nineStar3.classList.add("flowerstar");
-    //     nineStar4.classList.add("flowerstar");
-    //     nineStar5.classList.add("flowerstar");
-    //     nineStar6.classList.add("flowerstar");
-    //     nineStar7.classList.add("flowerstar");
-    //     nineStar8.classList.add("flowerstar");
-    //     nineStar9.classList.add("flowerstar");
-    //     nineStar10.classList.add("flowerstar");
-    //     nineStar11.classList.add("flowerstar");
-    //     ninePeople1.classList.add("nineshake");
-    //     ninePeople1.style.display = "none";
-    //     ninePeople2.classList.add("nineshake");
-    //     ninePeople2.style.display = "none";
+    },7000)
 
-    // },77000)
+    setTimeout(function(){
+        nineBg.classList.add("nine1t");
+        nineText.classList.add("nine1t");
+        logo.classList.add("nine1t");
+        oval1.classList.add("nine1t");
+        oval2.classList.add("nine1t");
+        nineAd1.classList.add("nine1t");
+        nineAd2.classList.add("nine1t");
+        nineAd3.classList.add("nine1t");
+        
+        nineStar1.classList.add("flowerstar");
+        nineStar2.classList.add("flowerstar");
+        nineStar3.classList.add("flowerstar");
+        nineStar4.classList.add("flowerstar");
+        nineStar5.classList.add("flowerstar");
+        nineStar6.classList.add("flowerstar");
+        nineStar7.classList.add("flowerstar");
+        nineStar8.classList.add("flowerstar");
+        nineStar9.classList.add("flowerstar");
+        nineStar10.classList.add("flowerstar");
+        nineStar11.classList.add("flowerstar");
+        ninePeople1.classList.add("nineshake");
+        // ninePeople1.style.display = "none";
+        ninePeople2.classList.add("nineshake");
+        // ninePeople2.style.display = "none";
+
+    },71000)
 
     // setTimeout(function(){
     //     ninePeople1.style.display = "block";
-    // },77500)
-    // setTimeout(function(){
-    //     frame1.classList.add("nine1t");
-    //     frame2.classList.add("nine1t");
-    //     frame3.classList.add("nine1t");
-    //     taste1.classList.add("nine1t");
-    //     taste2.classList.add("nine1t");
-    //     taste3.classList.add("nine1t");
-    // },78000)
+    // },74500)
+    setTimeout(function(){
+        frame1.classList.add("nine1t");
+        frame2.classList.add("nine1t");
+        frame3.classList.add("nine1t");
+        taste1.classList.add("nine1t");
+        taste2.classList.add("nine1t");
+        taste3.classList.add("nine1t");
+    },72000)
 }
 
 
