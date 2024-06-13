@@ -18,23 +18,6 @@ img {
     width: 100%;
     height: 100%;
 }
-.music-audio{
-    width: 100px;
-    height: 50px;
-    z-index: 50;
-    position: fixed;
-    top: 0;
-    right: 0;
-    opacity: 0;
-}
-
-/* .img-width {
-    width: 100%;
-} */
-
-/* .img-height {
-    height: 100%;
-} */
 
 .content {
     width: 640px;
@@ -54,6 +37,139 @@ img {
     left: 0;
     top: 0;
 }
+
+.music {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    width: 11%;
+    height: 5%;
+    z-index: 999;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music_img {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+}
+
+.music_img_page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.music_img>.music_img_page>img {
+    width: 90%;
+    height:90%;
+    /* border-radius: 50%; */
+}
+
+.music_img_page_stop {
+    width: 100%;
+    height: 3px;
+    background-color: #c6c2c2;
+    position: absolute;
+    /* 旋转65度 */
+    transform: rotate(65deg);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.musicRotate {
+    animation: rotate 10s linear infinite;
+    /* 持续10秒，线性运动，无限循环 */
+}
+
+.music_img_audio {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.music_img_audio>audio {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.music_img_page>img {
+    width: 100%;
+}
+/* .music-img{
+    width: 30px;
+    height:30px;
+    z-index: 20;
+    position: fixed;
+    top: 10px;
+    right: 5px;
+
+}
+.music-play{
+    width: 30px;
+    height:30px;
+    z-index: 20;
+    position: fixed;
+    top: 10px;
+    right: 5px;
+
+}
+.Music-controls{
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 10px;
+    right: 5px;
+    
+}
+.music_img_page_stop {
+    width: 164%;
+    height: 3px;
+    background-color: rgb(176, 176, 161);
+    position:absolute;
+    top: 13px;
+    right: -10px;
+    transform: rotate(65deg);
+    opacity: 1;
+}
+music-stop{
+    opacity: 0;
+}
+.musicRotate{
+    animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+} */
 
 /* 第一个页面 */
 .one-page {
