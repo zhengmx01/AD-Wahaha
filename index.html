@@ -13,16 +13,32 @@
 </head>
 
 <body>
-    
+    <div class="music" id="music">
+        <div class="music_img">
+            <div class="music_img_page" onclick="toggleMusic()">
+                <img src="./images/seven/top-fengche.png" alt="">
+                <!-- 禁止音乐 -->
+                <div class="music_img_page_stop" id="music_img_page_stop"></div>
+            </div>
+            <div class=" music_img_audio">
+                <audio id="bgMusic" src="./2.MP3" loop autoplay></audio>
+            </div>
+        </div>
+    </div>
     <ul class="content">
-        <audio controls class="music-audio" autoplay >
-            <source src="./2.MP3" type="audio/MP3">
-            <!-- <img src="./tubiao.webp" alt="" class="Music-controls"> -->
-        </audio>
+        <!-- <div class="music-img">
+            <div class="music-play" >
+                <img src="./images/seven/top-fengche.png" alt="" class="Music-controls">
+                <div class="music_img_page_stop" id="music_img_page_stop"></div>
+            </div>
+            <audio id="bgMusic" class="music-audio" autoplay>
+                <source src="./2.MP3" type="audio/MP3">
+            </audio>
+        </div> -->
         <!-- 第一页 -->
         <li class="one-page">
             <div class="attAreat">
-                
+
                 <!-- 卷 -->
                 <ul class="juanzhou">
                     <li class="left">
@@ -38,7 +54,7 @@
                 </ul>
                 <!-- 背景 -->
                 <div class="one-page-content">
-                    <img src="./images/one/content_bg.png" alt="" >
+                    <img src="./images/one/content_bg.png" alt="">
                 </div>
                 <!-- 人 -->
                 <div class="one-people">
@@ -248,7 +264,7 @@
                 <div class="five-top-head">
                     <img src="./images/five/top-head.png" alt="">
                 </div>
-                
+
                 <!-- 背景下 -->
                 <div class="five-bottom-bg">
                     <img src="./images/five/bottom-bg.png" alt="">
@@ -400,7 +416,7 @@
                 <!-- <div class="seven-center-bg1">
                     <img src="./images/seven/center-bg1.png" alt="">
                 </div> -->
-                
+
                 <div class="seven-center-bg3">
                     <img src="./images/seven/center-bg3.png" alt="">
                 </div>
@@ -605,7 +621,7 @@
                     <img src="./images/nine/ad2.png" alt="">
                 </div>
                 <div class="frame1">
-                    <img src="./images/nine/kuang.png" alt="" >
+                    <img src="./images/nine/kuang.png" alt="">
                 </div>
                 <div class="frame2">
                     <img src="./images/nine/kuang.png" alt="">
