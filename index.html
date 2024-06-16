@@ -9,10 +9,11 @@
     <meta name="viewport"
         content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>娃哈哈</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/index(1).css">
 </head>
 
 <body>
+    <!-- 音乐 -->
     <div class="music" id="music">
         <div class="music_img">
             <div class="music_img_page" onclick="toggleMusic()">
@@ -26,15 +27,6 @@
         </div>
     </div>
     <ul class="content">
-        <!-- <div class="music-img">
-            <div class="music-play" >
-                <img src="./images/seven/top-fengche.png" alt="" class="Music-controls">
-                <div class="music_img_page_stop" id="music_img_page_stop"></div>
-            </div>
-            <audio id="bgMusic" class="music-audio" autoplay>
-                <source src="./2.MP3" type="audio/MP3">
-            </audio>
-        </div> -->
         <!-- 第一页 -->
         <li class="one-page">
             <div class="attAreat">
@@ -45,7 +37,6 @@
                         <img src="./images/one/left.png" alt="">
                     </li>
                     <li class="center">
-                        <!-- <img src="./images/one/center.png" alt=""> -->
                         <img src="./images/one/text.png" alt="" class="text1">
                     </li>
                     <li class="right">
@@ -54,55 +45,57 @@
                 </ul>
                 <!-- 背景 -->
                 <div class="one-page-content">
-                    <img src="./images/one/content_bg.png" alt="">
+                    <div class="one-people">
+                        <img src="./images/one/people1.png" alt="">
+                    </div>
+                    <div class="one-jindu">
+                        <div class="jindu-tiao"></div>
+                    </div>
+                    <div class="one-number">
+                        <span id="one-number">0</span>%
+                    </div>
                 </div>
-                <!-- 人 -->
-                <div class="one-people">
-                    <img src="./images/one/people1.png" alt="">
-                </div>
-                <!-- 进度 -->
-                <div class="one-jindu">
-                    <img src="./images/one/jindu_bg.png" alt="" class="jindu-bg">
-                    <div class="jindu-tiao"></div>
-                </div>
-                <div class="one-number">
-                    <span id="one-number">0</span>%
-                </div>
+
+
             </div>
         </li>
         <!-- 第二页 -->
         <li class="two-page">
             <div class="attAreat">
                 <div class="two-page-content">
-                    <img src="./images/two/content_bg.png" alt="">
-                </div>
+                    <!-- 苏轼 -->
+                    <div class="su-body">
+                        <div class="people-su-head">
+                            <img src="./images/two/su_head.png" alt="">
+                        </div>
+                        <div class="people-su-body">
+                            <img src="./images/two/su_body.png" alt="">
+                        </div>
+                    </div>
+                    <div class="people-su-name">
+                        <img src="./images/two/su_name.png" alt="">
+                    </div>
+                    <!-- 张怀民 -->
+                    <div class="zhang-body">
 
-                <!-- 张怀民 -->
-                <div class="people-zhang-body">
-                    <img src="./images/two/zhang_body.png" alt="">
+                        <div class="people-zhang-head">
+                            <img src="./images/two/zhang_head.png" alt="">
+                        </div>
+                        <div class="people-zhang-body">
+                            <img src="./images/two/zhang_body.png" alt="">
+                        </div>
+                    </div>
+                    <div class="people-zhang-name">
+                        <img src="./images/two/zhang_name.png" alt="">
+                    </div>
+                    <!-- ad钙 -->
+                    <div class="content-AD">
+                        <img src="./images/two/AD.png" alt="">
+                    </div>
                 </div>
-                <div class="people-zhang-head">
-                    <img src="./images/two/zhang_head.png" alt="">
-                </div>
-                <div class="people-zhang-name">
-                    <img src="./images/two/zhang_name.png" alt="">
-                </div>
-                <!-- 苏轼 -->
-                <div class="people-su-body">
-                    <img src="./images/two/su_body.png" alt="">
-                </div>
-                <div class="people-su-head">
-                    <img src="./images/two/su_head.png" alt="">
-                </div>
-                <div class="people-su-name">
-                    <img src="./images/two/su_name.png" alt="">
-                </div>
+                <!-- 开始游戏 -->
                 <div class="start-game">
                     <img src="./images/two/start.png" alt="">
-                </div>
-                <!-- AD钙 -->
-                <div class="content-AD">
-                    <img src="./images/two/AD.png" alt="">
                 </div>
                 <!-- 字 -->
                 <div class="text">
@@ -112,130 +105,135 @@
         </li>
         <!-- 第三个页面 -->
         <li class="three-page">
-            <div class="attAreat">
-                <!-- 上背景 -->
+            <div class="three-big">
+                <!-- 上内容 -->
                 <div class="top-img">
                     <img src="./images/three/content_topBg.png" alt="">
-
+                    <div class="qipao1-img">
+                        <img src="./images/three/top_qipao1.png" alt="">
+                        <div class="text-img1">
+                            <img src="./images/three/word_boring.png" alt="">
+                        </div>
+                    </div>
+                    <div class="qipao2-img">
+                        <img src="./images/three/top_qipao2.png" alt="">
+                        <div class="text-img2">
+                            <img src="./images/three/word_miss.png" alt="">
+                        </div>
+                    </div>
+                    <div class="qipao3-img">
+                        <img src="./images/three/top_qipao3.png" alt="">
+                        <div class="text-img3">
+                            <img src="./images/three/word_sleep.png" alt="">
+                        </div>
+                    </div>
                 </div>
-                <!-- 气泡 -->
-
-                <div class="qipao1-img">
-                    <img src="./images/three/top_qipao1.png" alt="">
-                </div>
-                <div class="qipao2-img">
-                    <img src="./images/three/top_qipao2.png" alt="">
-                </div>
-                <div class="qipao3-img">
-                    <img src="./images/three/top_qipao3.png" alt="">
-                </div>
-
-                <!-- 字 -->
-                <div class="text-img1">
-                    <img src="./images/three/word_boring.png" alt="">
-                </div>
-                <div class="text-img2">
-                    <img src="./images/three/word_miss.png" alt="">
-                </div>
-                <div class="text-img3">
-                    <img src="./images/three/word_sleep.png" alt="">
-                </div>
-                <!-- 背景下 -->
+                <!-- 下内容 -->
                 <div class="bottom-img">
                     <img src="./images/three/bottom_bg.png" alt="">
-                </div>
-                <!-- 人 -->
-                <div class="person">
-                    <img src="./images/three/bottom_people.png" alt="">
-                </div>
-                <!-- 气泡 -->
-                <div class="qipao4-img">
-                    <img src="./images/three/bottom_qipao.png" alt="">
-                </div>
-                <!-- 字 -->
-                <div class="find">
-                    <img src="./images/three/word_find.png" alt="">
-                </div>
-                <div class="gas">
-                    <img src="./images/three/gas.png" alt="">
+                    <!-- 人 -->
+                    <div class="person">
+                        <img src="./images/three/bottom_people.png" alt="">
+                    </div>
+                    <!-- 气泡 -->
+                    <div class="qipao4-img">
+                        <img src="./images/three/bottom_qipao.png" alt="">
+                        <!-- 字 -->
+                        <div class="find">
+                            <img src="./images/three/word_find.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="gas">
+                        <img src="./images/three/gas.png" alt="">
+                    </div>
                 </div>
             </div>
-
         </li>
         <!-- 第四个页面 -->
         <li class="four-page">
-            <div class="attAreat">
+            <div class="three-big">
                 <!-- 背景图 上-->
                 <div class="four-top-bg">
                     <img src="./images/four/top-bg.png" alt="">
+                    <!-- 上 人 -->
+                    <div class="four-top-people">
+                        <img src="./images/four/top-people.png" alt="">
+                    </div>
+                    <!-- 气泡 -->
+                    <div class="four-qipao">
+                        <img src="./images/four/top-qipao.png" alt="">
+                        <!-- 字 -->
+                        <div class="four-text1">
+                            <img src="./images/four/top-text1.png" alt="">
+                        </div>
+                        <div class="four-text2">
+                            <img src="./images/four/top-text2.png" alt="">
+                        </div>
+                        <div class="four-text3">
+                            <img src="./images/four/top-text3.png" alt="">
+                        </div>
+                    </div>
+
+                    <!-- dong -->
+                    <div class="four-dong">
+                        <div class="dong1">
+                            <img src="./images/four/top-dong1.png" alt="">
+                        </div>
+                        <div class="dong2">
+                            <img src="./images/four/top-dong2.png" alt="">
+                        </div>
+                        <div class="dong3">
+                            <img src="./images/four/top-dong3.png" alt="">
+                        </div>
+                        <!-- 咚字 -->
+                        <div class="dong-text1">
+                            <img src="./images/four/dong1.png" alt="">
+                        </div>
+                        <div class="dong-text2">
+                            <img src="./images/four/dong2.png" alt="">
+                        </div>
+                        <div class="dong-text3">
+                            <img src="./images/four/dong3.png" alt="">
+                        </div>
+                    </div>
                 </div>
-                <!-- 上 人 -->
-                <div class="four-top-people">
-                    <img src="./images/four/top-people.png" alt="">
-                </div>
-                <!-- 气泡 -->
-                <div class="four-qipao">
-                    <img src="./images/four/top-qipao.png" alt="">
-                </div>
-                <!-- 字 -->
-                <div class="four-text1">
-                    <img src="./images/four/top-text1.png" alt="">
-                </div>
-                <div class="four-text2">
-                    <img src="./images/four/top-text2.png" alt="">
-                </div>
-                <div class="four-text3">
-                    <img src="./images/four/top-text3.png" alt="">
-                </div>
-                <!-- dong -->
-                <div class="dong1">
-                    <img src="./images/four/top-dong1.png" alt="">
-                </div>
-                <div class="dong2">
-                    <img src="./images/four/top-dong2.png" alt="">
-                </div>
-                <div class="dong3">
-                    <img src="./images/four/top-dong3.png" alt="">
-                </div>
-                <!-- 咚字 -->
-                <div class="dong-text1">
-                    <img src="./images/four/dong1.png" alt="">
-                </div>
-                <div class="dong-text2">
-                    <img src="./images/four/dong2.png" alt="">
-                </div>
-                <div class="dong-text3">
-                    <img src="./images/four/dong3.png" alt="">
-                </div>
+
                 <!-- 背景下3  -->
                 <div class="four-bottom-bg">
                     <img src="./images/four/bottom-bg.png" alt="">
+                    <!-- zzz -->
+                    <!-- <div class="four-zzz"> -->
+                    <div class="zzz1">
+                        <img src="./images/four/z1.png" alt="">
+                    </div>
+                    <div class="zzz2">
+                        <img src="./images/four/z2.png" alt="">
+                    </div>
+                    <div class="zzz3">
+                        <img src="./images/four/z3.png" alt="">
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="four-dong1"> -->
+                    <div class="dong4">
+                        <img src="./images/four/b-dong1.png" alt="">
+                    </div>
+                    <div class="dong5">
+                        <img src="./images/four/b-dong2.png" alt="">
+                    </div>
+                    <div class="dong6">
+                        <img src="./images/four/b-dong3.png" alt="">
+                    </div>
+                    <div class="dong7">
+                        <img src="./images/four/b-dong4.png" alt="">
+                    </div>
+                    <!-- </div> -->
+                    <div class="dong-text4">
+                        <img src="./images/four/dong4.png" alt="">
+                    </div>
                 </div>
-                <!-- zzz -->
-                <div class="zzz1">
-                    <img src="./images/four/z1.png" alt="">
-                </div>
-                <div class="zzz2">
-                    <img src="./images/four/z2.png" alt="">
-                </div>
-                <div class="zzz3">
-                    <img src="./images/four/z3.png" alt="">
-                </div>
-                <div class="dong4">
-                    <img src="./images/four/b-dong1.png" alt="">
-                </div>
-                <div class="dong5">
-                    <img src="./images/four/b-dong2.png" alt="">
-                </div>
-                <div class="dong6">
-                    <img src="./images/four/b-dong3.png" alt="">
-                </div>
-                <div class="dong7">
-                    <img src="./images/four/b-dong4.png" alt="">
-                </div>
-                <div class="dong-text4">
-                    <img src="./images/four/dong4.png" alt="">
-                </div>
+            </div>
+
             </div>
         </li>
         <!-- 第五个页面 -->
@@ -244,158 +242,152 @@
                 <!-- 背景上 -->
                 <div class="five-top-bg">
                     <img src="./images/five/top-bg.png" alt="">
-                </div>
-                <!-- 问号 气泡 -->
-                <!-- <div class="wenhao">
-                    <img src="./images/five/top-wen.png" alt="">
-                </div> -->
-                <div class="five-top-qipao">
-                    <img src="./images/five/top-qipao.png" alt="">
-                </div>
-                <!-- 问号 -->
-                <div class="wenhao">
-                    <img src="./images/five/wen.png" alt="">
-                </div>
-                <!-- 身 -->
-                <div class="five-top-body">
-                    <img src="./images/five/top-body.png" alt="">
-                </div>
-                <!-- 头 -->
-                <div class="five-top-head">
-                    <img src="./images/five/top-head.png" alt="">
-                </div>
 
+                    <div class="five-top-qipao">
+                        <img src="./images/five/top-qipao.png" alt="">
+                        <!-- 问号 -->
+                        <div class="wenhao">
+                            <img src="./images/five/wen.png" alt="">
+                        </div>
+                    </div>
+                    <div class="five-people">
+                        <!-- 身 -->
+                        <div class="five-top-body">
+                            <img src="./images/five/top-body.png" alt="">
+                        </div>
+                        <!-- 头 -->
+                        <div class="five-top-head">
+                            <img src="./images/five/top-head.png" alt="">
+                        </div>
+                    </div>
+                </div>
                 <!-- 背景下 -->
                 <div class="five-bottom-bg">
                     <img src="./images/five/bottom-bg.png" alt="">
-                </div>
-                <div class="r2">
-                    <!-- 身 -->
-                    <div class="five-bottom-body">
-                        <img src="./images/five/bottom-su-zhang-body.png" alt="">
+                    <div class="r2">
+                        <!-- 身 -->
+                        <div class="five-bottom-body">
+                            <img src="./images/five/bottom-su-zhang-body.png" alt="">
+                        </div>
+                        <!-- 头 -->
+                        <div class="five-bottom-head">
+                            <img src="./images/five/bottom-zhang-head.png" alt="">
+                        </div>
+                        <!-- AD钙 -->
+                        <div class="five-AD">
+                            <img src="./images/five/su-waist-milk.png" alt="">
+                        </div>
                     </div>
-                    <!-- 头 -->
-                    <div class="five-bottom-head">
-                        <img src="./images/five/bottom-zhang-head.png" alt="">
+                    <!-- 光 -->
+                    <div class="five-light">
+                        <img src="./images/five/bottom-guang.png" alt="">
+                    </div>
+
+                    <!-- 气泡 -->
+                    <div class="five-qipao">
+                        <img src="./images/five/qipao.png" alt="">
+                        <!-- 字 -->
+                        <div class="five-text">
+                            <img src="./images/five/text.png" alt="">
+                        </div>
                     </div>
                 </div>
 
 
-                <!-- 手 -->
-                <div class="five-bottom-hand">
-                    <img src="./images/five/bottom-su-hend.png" alt="">
-                </div>
-                <!-- 嘴 -->
-                <div class="five-mouth">
-                    <img src="./images/five/su-mouth.png" alt="">
-                </div>
-                <!-- 光 -->
-                <div class="five-light">
-                    <img src="./images/five/bottom-guang.png" alt="">
-                </div>
-                <!-- AD钙 -->
-                <div class="five-AD">
-                    <img src="./images/five/su-waist-milk.png" alt="">
-                </div>
-                <!-- 气泡 -->
-                <div class="five-qipao">
-                    <img src="./images/five/qipao.png" alt="">
-                </div>
-                <!-- 字 -->
-                <div class="five-text">
-                    <img src="./images/five/text.png" alt="">
-                </div>
             </div>
         </li>
         <!-- 第六个页面 -->
         <li class="six-page">
             <div class="attAreat">
                 <!-- 背景上 -->
+                <div class="sixBg">
+                    <div class="six-top-bg">
+                        <img src="./images/six/top-bg.png" alt="">
+                        <div class="six-top-bg2">
+                            <img src="./images/six/top-bg2.png" alt="">
+                        </div>
+                        <div class="six-top-bg1">
+                            <img src="./images/six/top-bg1.png" alt="">
+                        </div>
 
-                <div class="six-top-bg">
-                    <img src="./images/six/top-bg.png" alt="">
-                </div>
-                <div class="six-top-bg2">
-                    <img src="./images/six/top-bg2.png" alt="">
-                </div>
-                <div class="six-top-bg1">
-                    <img src="./images/six/top-bg1.png" alt="">
+                        <div class="six-top-bg3">
+                            <img src="./images/six/top-bg3.png" alt="">
+                        </div>
+                        <!--苏轼-->
+                        <div class="six-top-su">
+                            <img src="./images/six/top-people1.png" alt="">
+                        </div>
+                        <!-- 张怀民 身 头-->
+                        <div class="six-top-zhangbody">
+                            <div class="six-top-zhang-head">
+                                <img src="./images/six/top-people2-head.png" alt="">
+                            </div>
+                            <div class="six-top-zhang">
+                                <img src="./images/six/top-people2-body.png" alt="">
+                            </div>
+                        </div>
+                        <div class="six-top-AD">
+                            <img src="./images/six/t-ad.png" alt="">
+                        </div>
+                        <!-- 气泡 左 右 -->
+                        <div class="six-qipao1">
+                            <img src="./images/six/t-qipao1.png" alt="">
+                            <div class="six-text1">
+                                <img src="./images/six/t-text1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="six-qipao2">
+                            <img src="./images/six/t-qipao2.png" alt="">
+                            <div class="six-text2">
+                                <img src="./images/six/t-text2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
 
-                <div class="six-top-bg3">
-                    <img src="./images/six/top-bg3.png" alt="">
-                </div>
-                <div class="r3">
-                    <!--苏轼-->
-                    <div class="six-top-su">
-                        <img src="./images/six/top-people1.png" alt="">
-                    </div>
-                    <!-- 张怀民 身 头-->
-                    <div class="six-top-zhang">
-                        <img src="./images/six/top-people2-body.png" alt="">
-                    </div>
-                    <div class="six-top-zhang-head">
-                        <img src="./images/six/top-people2-head.png" alt="">
-                    </div>
-                </div>
-
-                <!-- 气泡 左 右 -->
-                <div class="six-qipao1">
-                    <img src="./images/six/t-qipao1.png" alt="">
-                </div>
-                <div class="six-qipao2">
-                    <img src="./images/six/t-qipao2.png" alt="">
-                </div>
-                <!-- 字 左右 -->
-                <div class="six-text1">
-                    <img src="./images/six/t-text1.png" alt="">
-                </div>
-                <div class="six-text2">
-                    <img src="./images/six/t-text2.png" alt="">
-                </div>
-                <!-- 上-ad钙 -->
-                <div class="six-top-AD">
-                    <img src="./images/six/t-ad.png" alt="">
-                </div>
                 <!-- 背景下 -->
                 <div class="six-bottom-bg">
                     <img src="./images/six/bottom-bg.png" alt="">
-                </div>
-                <!-- 气泡 左右 -->
-                <div class="six-qipao3">
-                    <img src="./images/six/b-qipao1.png" alt="">
-                </div>
-                <div class="six-qipao4">
-                    <img src="./images/six/b-qipao2.png" alt="">
-                </div>
-                <!-- 字 左右右-->
-                <div class="six-text3">
-                    <img src="./images/six/b-text1.png" alt="">
-                </div>
-                <div class="six-text4">
-                    <img src="./images/six/b-text2.png" alt="">
-                </div>
-                <div class="six-text5">
-                    <img src="./images/six/b-text3.png" alt="">
-                </div>
-                <!-- 星星 -->
-                <div class="star1">
-                    <img src="./images/six/star1.png" alt="">
-                </div>
-                <div class="star2">
-                    <img src="./images/six/star2.png" alt="">
-                </div>
-                <div class="star3">
-                    <img src="./images/six/star3.png" alt="">
-                </div>
-                <div class="star4">
-                    <img src="./images/six/star1.png" alt="">
-                </div>
-                <div class="star5">
-                    <img src="./images/six/star2.png" alt="">
-                </div>
-                <div class="star6">
-                    <img src="./images/six/star3.png" alt="">
+                    <!-- 气泡 左右 -->
+                    <div class="six-qipao3">
+                        <img src="./images/six/b-qipao1.png" alt="">
+                        <img src="./images/six/b-text1.png" alt="" class="six-text3t six-text3">
+                    </div>
+                    <div class="six-qipao4">
+                        <!-- 气泡框 -->
+                        <img src="./images/six/b-qipao2.png" alt="">
+                        <!-- 字 -->
+                        <div class="six-text4">
+                            <img src="./images/six/b-text2.png" alt="">
+                        </div>
+                        <div class="six-text5 ">
+                        <img src="./images/six/b-text3.png" alt="" >
+                    </div>
+                    </div>
+
+                    <!-- 星星 -->
+                    <div class="six-star">
+                        <div class="star1">
+                            <img src="./images/six/star1.png" alt="">
+                        </div>
+                        <div class="star2">
+                            <img src="./images/six/star2.png" alt="">
+                        </div>
+                        <div class="star3">
+                            <img src="./images/six/star3.png" alt="">
+                        </div>
+                        <div class="star4">
+                            <img src="./images/six/star1.png" alt="">
+                        </div>
+                        <div class="star5">
+                            <img src="./images/six/star2.png" alt="">
+                        </div>
+                        <div class="star6">
+                            <img src="./images/six/star3.png" alt="">
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -406,237 +398,265 @@
                 <!-- 背景上中下 -->
                 <div class="seven-top-bg">
                     <img src="./images/seven/top-bg.png" alt="">
-                </div>
-                <div class="seven-center-bg2">
-                    <img src="./images/seven/center-bg2.png" alt="">
-                </div>
-                <div class="seven-center-bg1">
-                    <img src="./images/seven/center-bg1.png" alt="">
-                </div>
-                <!-- <div class="seven-center-bg1">
-                    <img src="./images/seven/center-bg1.png" alt="">
-                </div> -->
 
-                <div class="seven-center-bg3">
-                    <img src="./images/seven/center-bg3.png" alt="">
-                </div>
-                <div class="seven-bottom-bg">
-                    <img src="./images/seven/botton-bg.png" alt="">
-                </div>
-                <!-- 上 -->
-                <div class="r">
                     <div class="seven-people">
                         <img src="./images/seven/top-people.png" alt="">
                     </div>
                     <div class="fengche">
                         <img src="./images/seven/top-fengche.png" alt="">
                     </div>
+
                 </div>
-
-                <!-- 中 -->
-
-                <!-- 人 风车 棍子 陀螺  风筝-->
-                <div class="r1">
-                    <div class="gunzi">
-                        <img src="./images/seven/cbg2-fengche1.png" alt="">
+                <div class="sevenBg">
+                    <div class="seven-center-bg1">
+                        <img src="./images/seven/center-bg1.png" alt="">
+                        <div class="seven-people1">
+                            <img src="./images/seven/cbg1-people.png" alt="">
+                        </div>
                     </div>
-                    <div class="fengche2">
-                        <img src="./images/seven/cbg2-fengche.png" alt="">
+                    <div class="seven-center-bg2right">
+                        <div class="seven-center-bg2">
+                            <img src="./images/seven/center-bg2.png" alt="">
+                            <!-- 大风筝 -->
+                            <div class="fengzheng">
+                                <img src="./images/seven/cbg2-fengzheng.png" alt="">
+                            </div>
+                            <div class="r1 fengzheng-f">
+                                <div class="fengche2">
+                                    <img src="./images/seven/cbg2-fengche.png" alt="">
+                                </div>
+                                <div class="gunzi">
+                                    <img src="./images/seven/cbg2-fengche1.png" alt="">
+                                </div>
+
+                            </div>
+
+
+                            <div class="tuoluo">
+                                <img src="./images/seven/cbg2-tuoluo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="seven-center-bg3">
+                            <img src="./images/seven/center-bg3.png" alt="">
+
+                        </div>
                     </div>
                 </div>
-                <div class="seven-people1">
-                    <img src="./images/seven/cbg1-people.png" alt="">
-                </div>
-                <div class="fengzheng">
-                    <img src="./images/seven/cbg2-fengzheng.png" alt="">
-                </div>
-                <div class="tuoluo">
-                    <img src="./images/seven/cbg2-tuoluo.png" alt="">
+                <div class="seven-bottom-bg">
+                    <img src="./images/seven/botton-bg.png" alt="">
+                    <div class="cherry">
+                        <img src="./images/seven/b-cherry.png" alt="">
+                    </div>
+                    <div class="tea">
+                        <img src="./images/seven/b-tea.png" alt="">
+                    </div>
+                    <div class="orange">
+                        <img src="./images/seven/b-orange.png" alt="">
+                    </div>
+                    <div class="pot">
+                        <img src="./images/seven/b-pot.png" alt="">
+                    </div>
+                    <div class="flower1">
+                        <img src="./images/seven/b-flower1.png" alt="">
+                    </div>
+                    <div class="flower2">
+                        <img src="./images/seven/b-flower2.png" alt="">
+                    </div>
+                    <div class="flower3">
+                        <img src="./images/seven/b-flower3.png" alt="">
+                    </div>
+                    <div class="flower4">
+                        <img src="./images/seven/b-flower4.png" alt="">
+                    </div>
+                    <div class="ad1">
+                        <img src="./images/seven/b-ad1.png" alt="" class="ad-img">
+                    </div>
+                    <div class="ad2">
+                        <img src="./images/seven/b-ad2.png" alt="" class="ad-img">
+                    </div>
+                    <div class="ad3">
+                        <img src="./images/seven/b-ad3.png" alt="" class="ad-img">
+                    </div>
+                    <div class="sstar">
+                        <img src="./images/seven/b-star.png" alt="">
+                    </div>
+                    <div class="sstar1">
+                        <img src="./images/seven/b-star1.png" alt="">
+                    </div>
+                    <div class="sstar2">
+                        <img src="./images/seven/b-star2.png" alt="">
+                    </div>
+                    <div class="sstar3">
+                        <img src="./images/seven/b-star3.png" alt="">
+                    </div>
+                    <div class="sstar4">
+                        <img src="./images/seven/b-star4.png" alt="">
+                    </div>
+                    <div class="sstar5">
+                        <img src="./images/seven/b-star5.png" alt="">
+                    </div>
+                    <div class="sstar6">
+                        <img src="./images/seven/b-star6.png" alt="">
+                    </div>
+                    <div class="sstar7">
+                        <img src="./images/seven/b-star7.png" alt="">
+                    </div>
+                    <div class="sstar8">
+                        <img src="./images/seven/b-star8.png" alt="">
+                    </div>
+                    <div class="sstar9">
+                        <img src="./images/seven/b-star9.png" alt="">
+                    </div>
+                    <div class="sstar10">
+                        <img src="./images/seven/b-star10.png" alt="">
+                    </div>
+                    <div class="sstar11">
+                        <img src="./images/seven/b-star11.png" alt="">
+                    </div>
                 </div>
 
 
-                <!-- 下 -->
 
-                <div class="cherry">
-                    <img src="./images/seven/b-cherry.png" alt="">
-                </div>
-                <div class="tea">
-                    <img src="./images/seven/b-tea.png" alt="">
-                </div>
-                <div class="orange">
-                    <img src="./images/seven/b-orange.png" alt="">
-                </div>
-                <div class="pot">
-                    <img src="./images/seven/b-pot.png" alt="">
-                </div>
-                <div class="flower1">
-                    <img src="./images/seven/b-flower1.png" alt="">
-                </div>
-                <div class="flower2">
-                    <img src="./images/seven/b-flower2.png" alt="">
-                </div>
-                <div class="flower3">
-                    <img src="./images/seven/b-flower3.png" alt="">
-                </div>
-                <div class="flower4">
-                    <img src="./images/seven/b-flower4.png" alt="">
-                </div>
-                <div class="ad1">
-                    <img src="./images/seven/b-ad1.png" alt="">
-                </div>
-                <div class="ad2">
-                    <img src="./images/seven/b-ad2.png" alt="">
-                </div>
-                <div class="ad3">
-                    <img src="./images/seven/b-ad3.png" alt="">
-                </div>
-                <div class="sstar">
-                    <img src="./images/seven/b-star.png" alt="">
-                </div>
-                <div class="sstar1">
-                    <img src="./images/seven/b-star1.png" alt="">
-                </div>
-                <div class="sstar2">
-                    <img src="./images/seven/b-star2.png" alt="">
-                </div>
-                <div class="sstar3">
-                    <img src="./images/seven/b-star3.png" alt="">
-                </div>
-                <div class="sstar4">
-                    <img src="./images/seven/b-star4.png" alt="">
-                </div>
-                <div class="sstar5">
-                    <img src="./images/seven/b-star5.png" alt="">
-                </div>
-                <div class="sstar6">
-                    <img src="./images/seven/b-star6.png" alt="">
-                </div>
-                <div class="sstar7">
-                    <img src="./images/seven/b-star7.png" alt="">
-                </div>
-                <div class="sstar8">
-                    <img src="./images/seven/b-star8.png" alt="">
-                </div>
-                <div class="sstar9">
-                    <img src="./images/seven/b-star9.png" alt="">
-                </div>
-                <div class="sstar10">
-                    <img src="./images/seven/b-star10.png" alt="">
-                </div>
-                <div class="sstar11">
-                    <img src="./images/seven/b-star11.png" alt="">
-                </div>
 
         </li>
         <!-- 第八个页面 -->
         <li class="eight-page">
             <div class="attAreat">
+                <!-- 上 -->
                 <div class="eight-top-bg">
                     <img src="./images/eight/top-bg.png" alt="">
-                </div>
-                <div class="eight-people">
-                    <img src="./images/eight/top-prople.png" alt="">
-                </div>
-                <div class="bird1">
-                    <img src="./images/eight/bird.png" alt="">
-                </div>
-                <div class="bird2">
-                    <img src="./images/eight/bird2.png" alt="">
-                </div>
-                <!-- 左 -->
-                <div class="eight-left-bg">
-                    <img src="./images/eight/left-bg.png" alt="">
+                    <div class="eight-people">
+                        <img src="./images/eight/top-prople.png" alt="">
+                    </div>
+                    <div class="bird1">
+                        <img src="./images/eight/bird.png" alt="">
+                    </div>
+                    <div class="bird2">
+                        <img src="./images/eight/bird2.png" alt="">
+                    </div>
                 </div>
 
-                <div class="eight-left-people">
-                    <img src="./images/eight/left-people.png" alt="">
+                <!-- 下 -->
+                <div class="eight-bottom">
+                    <!-- 左 -->
+                    <div class="eight-b-l">
+                        <div class="eight-left-bg">
+                            <img src="./images/eight/left-bg.png" alt="">
+                        </div>
+
+                        <div class="eight-left-people">
+                            <img src="./images/eight/left-people.png" alt="">
+                        </div>
+                    </div>
+                    <!-- 右 -->
+                    <div class="eight-b-r">
+                        <!-- 右 -->
+                        <div class="eight-right-bg1">
+                            <img src="./images/eight/right-bg1.png" alt="">
+                            <div class="dangong">
+                                <img src="./images/eight/dangong.png" alt="">
+                            </div>
+                        </div>
+                        <div class="eight-right-bg2">
+                            <img src="./images/eight/right-bg2.png" alt="">
+                            <div class="mianhua">
+                                <img src="./images/eight/mianhua.png" alt="">
+                            </div>
+                        </div>
+                        <div class="eight-right-bg3">
+                            <img src="./images/eight/right-bg3.png" alt="">
+
+                            <div class="candy">
+                                <img src="./images/eight/candy.png" alt="">
+                            </div>
+                            <div class="candy1">
+                                <img src="./images/eight/candy2.png" alt="">
+                            </div>
+                        </div>
+
+
+                        <div class="eight-flower1">
+                            <img src="./images/eight/flower1.png" alt="">
+                        </div>
+                        <div class="eight-flower2">
+                            <img src="./images/eight/flower2.png" alt="">
+                        </div>
+                        <div class="eight-star1">
+                            <img src="./images/eight/star1.png" alt="">
+                        </div>
+                        <div class="eight-star2">
+                            <img src="./images/eight/star2.png" alt="">
+                        </div>
+                        <div class="eight-star3">
+                            <img src="./images/eight/star3.png" alt="">
+                        </div>
+                        <div class="eight-star4">
+                            <img src="./images/eight/star4.png" alt="">
+                        </div>
+                        <div class="eight-star5">
+                            <img src="./images/eight/star5.png" alt="">
+                        </div>
+                        <div class="eight-star6">
+                            <img src="./images/eight/star6.png" alt="">
+                        </div>
+                    </div>
                 </div>
-                <!-- 右 -->
-                <div class="eight-right-bg1">
-                    <img src="./images/eight/right-bg1.png" alt="">
-                </div>
-                <div class="eight-right-bg2">
-                    <img src="./images/eight/right-bg2.png" alt="">
-                </div>
-                <div class="eight-right-bg3">
-                    <img src="./images/eight/right-bg3.png" alt="">
-                </div>
-                <div class="dangong">
-                    <img src="./images/eight/dangong.png" alt="">
-                </div>
-                <div class="mianhua">
-                    <img src="./images/eight/mianhua.png" alt="">
-                </div>
-                <div class="candy">
-                    <img src="./images/eight/candy.png" alt="">
-                </div>
-                <div class="candy1">
-                    <img src="./images/eight/candy2.png" alt="">
-                </div>
-                <div class="eight-flower1">
-                    <img src="./images/eight/flower1.png" alt="">
-                </div>
-                <div class="eight-flower2">
-                    <img src="./images/eight/flower2.png" alt="">
-                </div>
-                <div class="eight-star1">
-                    <img src="./images/eight/star1.png" alt="">
-                </div>
-                <div class="eight-star2">
-                    <img src="./images/eight/star2.png" alt="">
-                </div>
-                <div class="eight-star3">
-                    <img src="./images/eight/star3.png" alt="">
-                </div>
-                <div class="eight-star4">
-                    <img src="./images/eight/star4.png" alt="">
-                </div>
-                <div class="eight-star5">
-                    <img src="./images/eight/star5.png" alt="">
-                </div>
-                <div class="eight-star6">
-                    <img src="./images/eight/star6.png" alt="">
-                </div>
+
+
             </div>
         </li>
+        <!-- 第九个页面 -->
         <!-- 第九个页面 -->
         <li class="nine-page">
             <div class="attAreat">
                 <div class="nine-bg">
                     <img src="./images/nine/bg.png" alt="">
+                    <div class="logo">
+                        <img src="./images/nine/logo.png" alt="">
+                    </div>
                 </div>
-                <div class="oval1">
-                    <img src="./images/nine/oval.png" alt="">
-                </div>
-                <div class="oval2">
-                    <img src="./images/nine/oval1.png" alt="">
-                </div>
-                <div class="nine-ad1">
-                    <img src="./images/nine/ad1.png" alt="">
-                </div>
-                <div class="nine-ad3">
-                    <img src="./images/nine/ad3.png" alt="">
-                </div>
-                <div class="nine-ad2">
-                    <img src="./images/nine/ad2.png" alt="">
-                </div>
-                <div class="frame1">
-                    <img src="./images/nine/kuang.png" alt="">
-                </div>
-                <div class="frame2">
-                    <img src="./images/nine/kuang.png" alt="">
-                </div>
-                <div class="frame3">
-                    <img src="./images/nine/kuang.png" alt="">
-                </div>
-                <div class="taste1">
-                    <img src="./images/nine/peach.png" alt="">
-                </div>
-                <div class="taste2">
-                    <img src="./images/nine/orgin.png" alt="">
-                </div>
-                <div class="taste3">
-                    <img src="./images/nine/strawberry.png" alt="">
+
+                <div class="adContent">
+                    <div class="nine-ad1">
+                        <div class="frame1">
+                            <img src="./images/nine/kuang.png" alt="">
+                            <div class="taste1">
+                                <img src="./images/nine/peach.png" alt="">
+                            </div>
+                        </div>
+                        <img src="./images/nine/ad1.png" alt="">
+                    </div>
+                    <div class="nine-ad2">
+                        <div class="frame2">
+                            <img src="./images/nine/kuang.png" alt="">
+                            <div class="taste2">
+                                <img src="./images/nine/orgin.png" alt="">
+                            </div>
+                        </div>
+                        <img src="./images/nine/ad2.png" alt="">
+                    </div>
+                    <div class="nine-ad3">
+                        <div class="frame3">
+                            <img src="./images/nine/kuang.png" alt="">
+                            <div class="taste3">
+                                <img src="./images/nine/strawberry.png" alt="">
+                            </div>
+                        </div>
+                        <img src="./images/nine/ad3.png" alt="">
+                    </div>
+
+                    <div class="ovalContent">
+                        <div class="oval1">
+                            <img src="./images/nine/oval.png" alt="">
+                        </div>
+                        <div class="oval2">
+                            <img src="./images/nine/oval1.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="nine-text">
+                        <img src="./images/nine/text.png" alt="">
+                    </div>
                 </div>
 
                 <div class="nine-people1">
@@ -677,12 +697,6 @@
                 </div>
                 <div class="nine-star11">
                     <img src="./images/nine/star11.png" alt="">
-                </div>
-                <div class="nine-text">
-                    <img src="./images/nine/text.png" alt="">
-                </div>
-                <div class="logo">
-                    <img src="./images/nine/logo.png" alt="">
                 </div>
             </div>
         </li>

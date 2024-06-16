@@ -123,6 +123,7 @@ var sixTopBg2 = document.getElementsByClassName("six-top-bg2")[0];
 var sixTopBg3 = document.getElementsByClassName("six-top-bg3")[0];
 var r3 = document.getElementsByClassName("r3")[0];
 var sixTopSu = document.getElementsByClassName("six-top-su")[0];
+var sixTopzhangbody = document.getElementsByClassName("six-top-zhangbody")[0];
 var sixTopzhang = document.getElementsByClassName("six-top-zhang")[0];
 var sixTopZhangHead = document.getElementsByClassName("six-top-zhang-head")[0];
 var sixTopZhangHead = document.getElementsByClassName("six-top-zhang-head")[0];
@@ -402,9 +403,9 @@ startGame.onclick = function () {
     }, 31500)
     setTimeout(function () {
         sixTopSu.classList.add("six-top-zhangt");
-        sixTopzhang.classList.add("six-top-zhangt");
+        sixTopzhangbody.classList.add("six-top-zhangt");
         sixTopZhangHead.classList.add("six-top-zhang-headt");
-        r3.classList.add("rt");
+        // r3.classList.add("rt");
     }, 32500)
     setTimeout(function () {
         sixQipao1.classList.add("six-qipao1t");
@@ -455,7 +456,7 @@ startGame.onclick = function () {
     setTimeout(function () {
         sevenPeople.classList.add("seven-peoplet");
         fengche.classList.add("fengchet");
-        r.classList.add("rt");
+        // r.classList.add("rt");
     }, 47000)
     setTimeout(function () {
         sevenCenterBg1.classList.add("seven-center-bg1t");
@@ -504,10 +505,6 @@ startGame.onclick = function () {
         sstar10.classList.add("flowerstar");
         sstar11.classList.add("flowerstar");
     }, 54000)
-    // setTimeout(function(){
-
-
-    // },61000)
     // 八
     setTimeout(function () {
         sevenPage.style.display = "none";
@@ -560,47 +557,47 @@ startGame.onclick = function () {
     }, 68000)
     setTimeout(function () {
         eightPage.style.display = "none";
-    }, 7000)
+    }, 70000)
 
-    setTimeout(function () {
-        nineBg.classList.add("nine1t");
-        nineText.classList.add("nine1t");
-        logo.classList.add("nine1t");
-        oval1.classList.add("nine1t");
-        oval2.classList.add("nine1t");
-        nineAd1.classList.add("nine1t");
-        nineAd2.classList.add("nine1t");
-        nineAd3.classList.add("nine1t");
+    // setTimeout(function () {
+    //     nineBg.classList.add("nine1t");
+    //     nineText.classList.add("nine1t");
+    //     logo.classList.add("nine1t");
+    //     oval1.classList.add("nine1t");
+    //     oval2.classList.add("nine1t");
+    //     nineAd1.classList.add("nine1t");
+    //     nineAd2.classList.add("nine1t");
+    //     nineAd3.classList.add("nine1t");
 
-        nineStar1.classList.add("flowerstar");
-        nineStar2.classList.add("flowerstar");
-        nineStar3.classList.add("flowerstar");
-        nineStar4.classList.add("flowerstar");
-        nineStar5.classList.add("flowerstar");
-        nineStar6.classList.add("flowerstar");
-        nineStar7.classList.add("flowerstar");
-        nineStar8.classList.add("flowerstar");
-        nineStar9.classList.add("flowerstar");
-        nineStar10.classList.add("flowerstar");
-        nineStar11.classList.add("flowerstar");
-        ninePeople1.classList.add("nineshake");
-        // ninePeople1.style.display = "none";
-        ninePeople2.classList.add("nineshake");
-        // ninePeople2.style.display = "none";
+    //     nineStar1.classList.add("flowerstar");
+    //     nineStar2.classList.add("flowerstar");
+    //     nineStar3.classList.add("flowerstar");
+    //     nineStar4.classList.add("flowerstar");
+    //     nineStar5.classList.add("flowerstar");
+    //     nineStar6.classList.add("flowerstar");
+    //     nineStar7.classList.add("flowerstar");
+    //     nineStar8.classList.add("flowerstar");
+    //     nineStar9.classList.add("flowerstar");
+    //     nineStar10.classList.add("flowerstar");
+    //     nineStar11.classList.add("flowerstar");
+    //     ninePeople1.classList.add("nineshake");
+    //     // ninePeople1.style.display = "none";
+    //     ninePeople2.classList.add("nineshake");
+    //     // ninePeople2.style.display = "none";
 
-    }, 71000)
+    // }, 71000)
 
-    // setTimeout(function(){
-    //     ninePeople1.style.display = "block";
-    // },74500)
-    setTimeout(function () {
-        frame1.classList.add("nine1t");
-        frame2.classList.add("nine1t");
-        frame3.classList.add("nine1t");
-        taste1.classList.add("nine1t");
-        taste2.classList.add("nine1t");
-        taste3.classList.add("nine1t");
-    }, 72000)
+    // // setTimeout(function(){
+    // //     ninePeople1.style.display = "block";
+    // // },74500)
+    // setTimeout(function () {
+    //     frame1.classList.add("nine1t");
+    //     frame2.classList.add("nine1t");
+    //     frame3.classList.add("nine1t");
+    //     taste1.classList.add("nine1t");
+    //     taste2.classList.add("nine1t");
+    //     taste3.classList.add("nine1t");
+    // }, 72000)
 }
 
 

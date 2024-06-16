@@ -1,0 +1,3710 @@
+/*  */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.content {
+    width: 640px;
+    height: 1030px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.content>li {
+    /* width: 100%;
+    height: 100%; */
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.music {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    width: 11%;
+    height: 5%;
+    z-index: 999;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music_img {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+}
+
+.music_img_page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.music_img>.music_img_page>img {
+    width: 100%;
+    /* height: 90%; */
+    /* border-radius: 50%; */
+}
+
+.music_img_page_stop {
+    width: 100%;
+    height: 3px;
+    background-color: #c6c2c2;
+    position: absolute;
+    /* 旋转65度 */
+    transform: rotate(65deg);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.musicRotate {
+    animation: rotate 10s linear infinite;
+    /* 持续10秒，线性运动，无限循环 */
+}
+
+.music_img_audio {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.music_img_audio>audio {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.music_img_page>img {
+    width: 100%;
+}
+
+/* 第一个页面 */
+.one-page {
+    background-color: #fcfbe8;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+}
+
+/* 元素透明 */
+@keyframes opac {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+/* 背景 */
+.one-page-content {
+    width: 73%;
+    height: 44%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(../images/one/content_bg.png);
+    background-size: cover;
+    background-position: center top;
+}
+
+/* 卷轴 590*267  */
+.juanzhou {
+    width: 92%;
+    height: 20%;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    /* background-color: pink; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%);
+}
+
+.left {
+    width: 10%;
+    /* height: 26%; */
+    position: relative;
+    z-index: 2;
+}
+
+.left>img {
+    width: 100%;
+}
+
+.center {
+    /* width: 80%; */
+    height: 70%;
+    position: relative;
+    top: -1%;
+    left: -2%;
+    background-image: url("../images/one/center.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: centerani 2s linear forwards;
+
+}
+
+@keyframes centerani {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 85%;
+    }
+}
+
+.text1 {
+    width: 58%;
+    height: 58%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    opacity: 0;
+    animation: text1ani 1s linear forwards 2s;
+}
+
+@keyframes text1ani {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.right {
+    width: 10%;
+    /* height: 26%; */
+    position: relative;
+    left: -3.2%;
+
+}
+
+.right>img {
+    width: 100%;
+}
+
+/* 人 */
+.one-people {
+    /* 249X360 */
+    width: 71%;
+    height: 80%;
+    position: absolute;
+    /* left: 5%; */
+    bottom: 0;
+    left: 0;
+    animation: sli 3s linear forwards;
+}
+
+.one-people>img {
+    height: 100%;
+}
+
+@keyframes sli {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        /* right: 0; */
+        left: 40%;
+    }
+}
+
+
+/* 进度条 */
+.one-jindu {
+    /* 296x48 */
+    width: 100%;
+    height: 15%;
+    background-image: url(../images/one/jindu_bg.png);
+    background-size: 100% 100%;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 100%);
+    position: absolute;
+}
+
+.one-jindu>.jindu-bg {
+    width: 100%;
+    /* height: 100%; */
+}
+
+.jindu-tiao {
+    width: 100%;
+    height: 28%;
+    background-color: orange;
+    position: absolute;
+    bottom: 0;
+    /* border-radius: 0,0,13px,13px; */
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+    background-size: cover;
+    animation-duration: 4s;
+    animation-name: ani;
+
+}
+
+@keyframes ani {
+    from {
+        left: 0;
+        width: 0;
+    }
+
+    to {
+        left: 0;
+        width: 100%;
+    }
+}
+
+.one-number {
+    width: 100%;
+    font-size: 20px;
+    color: orange;
+    text-align: center;
+    position: absolute;
+    bottom: -33%;
+    left: 0;
+}
+
+/* 第二个页面 */
+.two-page {
+    background-color: #fcfbe8;
+    z-index: 14;
+    /* display: none; */
+}
+
+.tow-paget {
+    animation: opac 2s linear forwards;
+}
+
+/* 背景 */
+.two-page-content {
+    /* 577*527 */
+    width: 90%;
+    height: 51%;
+    position: absolute;
+    top: 17%;
+    left: 5%;
+    background-image: url(../images/two/content_bg.png);
+    background-size: 100% 100%;
+}
+
+/* AD钙奶 87*68 */
+.content-AD {
+    width: 15%;
+    height: 12%;
+    position: absolute;
+    bottom: 5%;
+    right: 46%;
+    z-index: 3;
+}
+
+.content-AD>img {
+    width: 100%;
+}
+
+/* 张怀民 头157*144 身211*142 名39*84 */
+
+.zhang-body {
+    width: 36%;
+    height: 54%;
+    /* background-color: wheat; */
+    position: absolute;
+    bottom: 4%;
+    left: 45%;
+}
+
+/*  */
+.people-zhang-body {
+    width: 100%;
+    height: 49%;
+    /* 修改 */
+    position: absolute;
+    top: 50%;
+}
+
+
+.people-zhang-body>img {
+    /* height: 100%; */
+    /* 修改 */
+    width: 100%;
+}
+
+.people-zhang-head {
+    width: 74%;
+    height: 50%;
+    position: absolute;
+    left: 19%;
+    top: 4%;
+    animation: shake1 2s linear infinite;
+    transform-origin: center bottom;
+    /* 修改 */
+    z-index: 2;
+}
+
+.people-zhang-head>img {
+    /* height: 100%; */
+    /* 修改 */
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+@keyframes shake1 {
+    0% {
+        transform: rotate(-5deg);
+    }
+
+    25% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+
+/* 39*84 */
+.people-zhang-name {
+    width: 6%;
+    height: 11%;
+    position: absolute;
+    right: 11%;
+    bottom: 24%;
+    animation: showtow 3s ease-in-out infinite;
+}
+
+.people-zhang-name>img {
+    width: 100%;
+}
+
+/* 苏轼 头164*181 身216*137 名38*77 */
+.su-body {
+    width: 36%;
+    height: 54%;
+    /* background-color: wheat; */
+    position: absolute;
+    bottom: 3%;
+    left: 15%;
+    z-index: 2;
+}
+
+/*  */
+.people-su-body {
+    width: 100%;
+    height: 49%;
+    /* 修改 */
+    position: absolute;
+    top: 50%;
+}
+
+
+.people-su-body>img {
+    /* height: 100%; */
+    /* 修改 */
+    width: 100%;
+}
+
+.people-su-head {
+    width: 74%;
+    height: 50%;
+    position: absolute;
+    /* left: 11%;
+    top: 10%; */
+    left: 14%;
+    top: 9.4%;
+    animation: shake1 2s linear infinite;
+    transform-origin: center bottom;
+    z-index: 2;
+}
+
+.people-su-head>img {
+    /* height: 100%; */
+    /* 修改 */
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* 38*77 */
+.people-su-name {
+    width: 6%;
+    height: 10%;
+    position: absolute;
+    left: 5%;
+    bottom: 25%;
+    opacity: 0;
+    animation: showtow 3s ease-in-out infinite;
+}
+
+.people-su-name>img {
+    width: 100%;
+}
+
+@keyframes showtow {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+/* 开始游戏 按钮 262*122*/
+.start-game {
+    width: 40%;
+    height: 11%;
+    position: absolute;
+    left: 31%;
+    bottom: 19%;
+    /* opacity: 0; */
+}
+
+.start-game>img {
+    width: 100%;
+}
+
+.start-gamet {
+    animation: scaleXY 1s infinite linear;
+}
+
+@keyframes scaleXY {
+    0% {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.9);
+    }
+
+}
+
+/* 字 354*27 */
+.text {
+    width: 55%;
+    height: 2.6%;
+    position: absolute;
+    left: 24%;
+    bottom: 14%;
+}
+
+.text>img {
+    width: 100%;
+}
+
+/* 第三个页面 */
+.three-page {
+    width: 100%;
+    height: 100%;
+    background-color: #fcfbe8;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    z-index: 13;
+    justify-content: center;
+}
+
+.three-big {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .three-bg{
+    width: 100%;
+    height: 80%;
+} */
+.attAreat {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+/* 4.上 581*556*/
+.top-img {
+    width: 90%;
+    height: 53%;
+    /* margin-top: 4%; */
+    position: relative;
+    top: 8%;
+    /* left: 5%; */
+    opacity: 0;
+    /* background-image: url(../images/three/content_topBg.png); */
+    /* background: red;*/
+}
+
+.top-img>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.top-imgt {
+    animation: showtow 1s ease-in-out forwards;
+}
+
+@keyframes showtow {
+    0% {
+        opacity: 0;
+        /* 初始状态为完全透明 */
+    }
+
+    100% {
+        opacity: 1;
+        /* 结束时为完全不透明 */
+    }
+}
+
+.qipao1-img {
+    width: 19%;
+    height: 14%;
+    position: absolute;
+    top: 13%;
+    left: 7%;
+    opacity: 0;
+}
+
+/* 图片从左进入 */
+.qipao1-imgt {
+    animation: enter-x-left 1s ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateX(-50px);
+}
+
+@keyframes enter-x-left {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.qipao2-img {
+    width: 18%;
+    height: 16%;
+    position: absolute;
+    top: 13%;
+    right: 25%;
+    opacity: 0;
+    /* animation: qipao 1s forwards 3s; */
+}
+
+.qipao2-imgt {
+    animation: enter-x-left 1s ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateX(-50px);
+}
+
+.qipao3-img {
+    width: 14%;
+    height: 10%;
+    position: absolute;
+    top: 31%;
+    right: 29%;
+    opacity: 0;
+    /* animation: qipao 1s forwards 2s; */
+}
+
+/* 图片从右进入 */
+.qipao3-imgt {
+    animation: enter-x-left 1s ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateX(50px);
+}
+
+.qipao1-img>img {
+    width: 100%;
+}
+
+.qipao2-img>img {
+    width: 100%;
+}
+
+.qipao3-img>img {
+    width: 100%;
+}
+
+.text-img1 {
+    width: 66%;
+    height: 39%;
+    position: absolute;
+    top: 34%;
+    left: 17%;
+    opacity: 0;
+    /* animation: text1 1s forwards 1.4s; */
+}
+
+.text-img1t {
+    animation: showtow 1s ease-in-out forwards;
+}
+
+@keyframes text1 {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.text-img2 {
+    width: 72%;
+    height: 31%;
+    position: absolute;
+    top: 28.5%;
+    right: 13.5%;
+    opacity: 0;
+    /* animation: text1 1s forwards 3.5s; */
+}
+
+.text-img2t {
+    animation: showtow 1s ease-in-out forwards;
+}
+
+.text-img3 {
+    width: 67%;
+    height: 59%;
+    position: absolute;
+    top: 23.5%;
+    right: 13.5%;
+    opacity: 0;
+    /* animation: text1 1s forwards 2.5s; */
+}
+
+.text-img3t {
+    animation: showtow 1s ease-in-out forwards;
+}
+
+.text-img1>img {
+    width: 100%;
+}
+
+.text-img2>img {
+    width: 100%;
+}
+
+.text-img3>img {
+    width: 100%;
+}
+
+/* 4.下  584**516*/
+.bottom-img {
+    width: 90%;
+    height: 37%;
+    margin-bottom: 32%;
+    position: relative;
+    bottom: 0%;
+    /* left: 5%; */
+    opacity: 0;
+    /* background-color: gold; */
+    /* background-image: url(../images/three/bottom_bg.png); */
+    /* background-size: 100% 100%; */
+    /* animation: text1 1s forwards 4.2s;*/
+}
+
+.bottom-img>img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.bottom-imgt {
+    animation: showtow 1s ease-in-out forwards;
+}
+
+/* 230*361 */
+.person {
+    width: 39%;
+    height: 92%;
+    position: absolute;
+    bottom: -19%;
+    left: 34%;
+    opacity: 0;
+    /* 5s延迟 */
+
+}
+
+.persont {
+    animation: person 2s forwards;
+}
+
+.person>img {
+    width: 100%;
+}
+
+@keyframes person {
+    from {
+        left: 0;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        right: 40%;
+    }
+}
+
+/* 210*174 */
+.qipao4-img {
+    width: 30%;
+    height: 33%;
+    position: absolute;
+    bottom: 37%;
+    left: 4%;
+    opacity: 0;
+
+}
+
+.qipao4-img>img {
+    width: 100%;
+}
+
+.qipao4-imgt {
+    animation: enter-x-left 1s ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateX(-50px);
+}
+
+/* 159*70 */
+.find {
+    width: 65%;
+    height: 46%;
+    position: absolute;
+    bottom: 33.8%;
+    left: 19%;
+    opacity: 0;
+    /* animation: text1 1s forwards ; */
+}
+
+.find>img {
+    width: 100%;
+}
+
+.findt {
+    animation: showtow 1s ease-in-out forwards;
+}
+
+/* 77*62 */
+.gas {
+    width: 13%;
+    height: 15%;
+    position: absolute;
+    bottom: 14%;
+    left: 12%;
+    opacity: 0;
+
+}
+
+.gast {
+    animation: opac4 2s linear forwards;
+}
+
+.gas>img {
+    width: 100%;
+}
+
+@keyframes opac4 {
+    0% {
+        left: 0;
+        opacity: 1;
+        transform: scale(0.5);
+    }
+
+    25% {
+        opacity: 1;
+        transform: scale(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    75% {
+        opacity: 1;
+        transform: scale(0.5);
+    }
+
+    100% {
+        left: 22%;
+        opacity: 1;
+    }
+}
+
+/* 第四个页面 */
+.four-page {
+    background-color: #fcfbe8;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 12;
+}
+
+/* img{
+    width: 100%;
+} */
+/* 583*585 */
+.four-top-bg {
+    width: 91%;
+    height: 56%;
+    position: relative;
+    opacity: 0;
+    bottom: 2%;
+}
+
+.four-top-bg>img {
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+
+}
+
+.four-top-bgt {
+    animation: showtow 1s ease-in-out forwards;
+}
+
+/* 气泡222*114 字189*36 字189*33 字190*39*/
+.four-qipao {
+    width: 38%;
+    height: 19%;
+    position: absolute;
+    top: 37%;
+    left: 4%;
+    opacity: 0;
+    /* animation: text1 2s forwards 4s; */
+}
+
+.four-qipao>img {
+    width: 100%;
+}
+
+.four-qipaot {
+    animation: enter-x-left 1s ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateX(-50px);
+}
+
+.four-text1 {
+    width: 81%;
+    height: 31%;
+    position: absolute;
+    top: 18%;
+    left: 5%;
+    opacity: 0;
+
+}
+
+.four-text1>img {
+    width: 100%;
+}
+
+.four-text1t {
+    animation: text1 1s backwards;
+}
+
+.four-text2 {
+    width: 81%;
+    height: 28%;
+    position: absolute;
+    top: 17%;
+    left: 6.5%;
+    opacity: 0;
+
+}
+
+.four-text2>img {
+    width: 100%;
+}
+
+.four-text2t {
+    animation: text1 1s backwards;
+}
+
+.four-text3 {
+    height: 32%;
+    width: 80%;
+    position: absolute;
+    top: 17%;
+    left: 5%;
+    opacity: 0;
+    /* background-color: lavender; */
+}
+
+.four-text3>img {
+    width: 100%;
+}
+
+.four-text3t {
+    animation: text1 1s forwards;
+}
+
+/* 人224*416 */
+.four-top-people {
+    width: 38%;
+    height: 71%;
+    position: absolute;
+    bottom: 2%;
+    left: 0%;
+    opacity: 0;
+    /* 5s延迟 */
+
+}
+
+.four-top-people>img {
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+}
+
+.four-top-peoplet {
+    animation: person1 2s linear forwards;
+}
+
+@keyframes person1 {
+    from {
+        left: 0;
+        /* opacity: 0; */
+    }
+
+    to {
+        opacity: 1;
+        left: 40%;
+    }
+}
+
+/* 咚黄55*64 96*60 80*18  583*585*/
+.dong1 {
+    width: 52%;
+    height: 60%;
+    position: absolute;
+    top: 1%;
+    right: 35%;
+    opacity: 0;
+
+}
+
+.dong1>img {
+    width: 100%;
+}
+
+.dong1t {
+    animation: dong1 0.7s linear backwards 3 1s;
+    transform-origin: center bottom;
+}
+
+.dong2 {
+    width: 91%;
+    height: 57%;
+    position: absolute;
+    top: 13%;
+    right: -10%;
+    opacity: 0;
+    /* animation: dong1 0.7s linear backwards 3 3s;
+    transform-origin: center bottom;*/
+}
+
+.dong2>img {
+    width: 100%;
+}
+
+.dong2t {
+    animation: dong1 0.7s linear backwards 3 1s;
+    transform-origin: center bottom;
+}
+
+.dong3 {
+    width: 76%;
+    height: 17%;
+    position: absolute;
+    top: 56%;
+    right: 0%;
+    opacity: 0;
+    /* animation: dong1 0.7s linear backwards 3 1s;
+    transform-origin: center bottom; */
+}
+
+.dong3>img {
+    width: 100%;
+}
+
+.dong3t {
+    animation: dong1 0.7s linear backwards 3 1s;
+    transform-origin: center bottom;
+}
+
+@keyframes dong1 {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes dong {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+
+    25% {
+        transform: rotate(7deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: rotate(-7deg);
+        opacity: 1;
+    }
+
+    75% {
+        transform: rotate(7deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(-7deg);
+        opacity: 1;
+    }
+}
+
+/* 咚 47*55 65*30 69*38 583*585*/
+/* 105*105 */
+.four-dong {
+    width: 19%;
+    height: 16%;
+    /* background-color: #fcfbe8; */
+    position: absolute;
+    top: 36%;
+    right: 7%;
+}
+
+.four-dong>img {
+    width: 100%;
+}
+
+.dong-text1 {
+    width: 45%;
+    height: 55%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.dong-text1>img {
+    width: 100%;
+}
+
+.dong-text1t {
+    animation: dong 0.7s linear backwards 3 1s;
+    transform-origin: bottom center;
+}
+
+.dong-text2 {
+    width: 61%;
+    height: 28%;
+    position: absolute;
+    bottom: -1%;
+    right: 6%;
+    opacity: 0;
+    /* animation: dong 0.7s linear backwards 3 3.2s;
+    transform-origin: bottom center; */
+}
+
+.dong-text2>img {
+    width: 100%;
+}
+
+.dong-text2t {
+    animation: dong 0.7s linear backwards 3 1s;
+    transform-origin: bottom center;
+}
+
+.dong-text3 {
+    width: 65%;
+    height: 36%;
+    position: absolute;
+    bottom: 26%;
+    right: 7%;
+    opacity: 0;
+    /* animation: dong 0.7s linear backwards 3 3.2s;
+    transform-origin: bottom center; */
+}
+
+.dong-text3>img {
+    width: 100%;
+}
+
+.dong-text3t {
+    animation: dong 0.7s linear backwards 3 1s;
+    transform-origin: bottom center;
+}
+
+/* 背景下 583*369 */
+
+.four-bottom-bg {
+    width: 91%;
+    height: 35%;
+    position: relative;
+    opacity: 0;
+    /* 延迟6.5 */
+
+}
+
+.four-bottom-bg>img {
+    width: 100%;
+}
+
+.four-bottom-bgt {
+    animation: text1 1s forwards;
+}
+
+/* zzz 32*41 28*35 23*29 583*369*/
+.zzz1 {
+    width: 5%;
+    height: 11%;
+    position: absolute;
+    top: 14.5%;
+    left: 35.5%;
+    opacity: 0;
+
+}
+
+.zzz1>img {
+    width: 100%;
+}
+
+.zzz1t {
+    animation: text1 1s forwards infinite;
+}
+
+.zzz2 {
+    width: 4%;
+    height: 9%;
+    position: absolute;
+    top: 10%;
+    left: 42%;
+    opacity: 0;
+}
+
+.zzz2>img {
+    width: 100%;
+}
+
+.zzz2t {
+    animation: text1 1s forwards infinite;
+}
+
+.zzz3 {
+    width: 3%;
+    height: 7%;
+    position: absolute;
+    top: 2%;
+    left: 47%;
+    opacity: 0;
+
+}
+
+.zzz3>img {
+    width: 100%;
+}
+
+.zzz3t {
+    animation: text1 1s forwards infinite;
+}
+
+/* 黄咚 125*45 136*84 94*107 48*97 583*369*/
+.dong4 {
+    width: 21%;
+    height: 12%;
+    position: absolute;
+    top: 0;
+    right: 1%;
+    opacity: 0;
+
+}
+
+.dong4>img {
+    width: 100%;
+}
+
+.dong4t {
+    animation: dong1 0.7s linear backwards 3;
+    transform-origin: top center;
+}
+
+.dong5 {
+    width: 23%;
+    height: 22%;
+    position: absolute;
+    top: 2%;
+    right: 0;
+    opacity: 0;
+
+}
+
+.dong5>img {
+    width: 100%;
+}
+
+.dong5t {
+    animation: dong1 0.7s linear backwards 3;
+    transform-origin: top center;
+}
+
+.dong6 {
+    width: 16%;
+    height: 28%;
+    position: absolute;
+    top: 7%;
+    right: 0;
+    opacity: 0;
+
+}
+
+.dong6>img {
+    width: 100%;
+}
+
+.dong6t {
+    animation: dong1 0.7s linear backwards 3;
+    transform-origin: top center;
+}
+
+.dong7 {
+    width: 8%;
+    height: 26%;
+    position: absolute;
+    top: 14%;
+    right: 0%;
+    opacity: 0;
+}
+
+.dong7>img {
+    width: 100%;
+}
+
+.dong7t {
+    animation: dong1 0.7s linear backwards 3;
+    transform-origin: top center;
+}
+
+/* 咚 111*37 */
+.dong-text4 {
+    width: 19%;
+    height: 10%;
+    position: absolute;
+    top: 9%;
+    right: 1.5%;
+    opacity: 0;
+
+}
+
+.dong-text4>img {
+    width: 100%;
+}
+
+.dong-text4t {
+    animation: dong 0.7s linear backwards 3;
+    transform-origin: bottom center;
+}
+
+/* 第五个页面 */
+
+/* 背景上587*575 */
+.five-page {
+    background-color: #fcfbe8;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+
+}
+
+
+
+.five-top-bg {
+    width: 90%;
+    height: 50%;
+    position: relative;
+    top: 5%;
+    opacity: 0;
+}
+
+.five-top-bg>img {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.five-top-bgt {
+    animation: showtow 1s ease-in-out forwards;
+}
+
+/* 问号 90*41 */
+/* 气泡 111*91 */
+.five-top-qipao {
+    width: 18%;
+    height: 15%;
+    position: absolute;
+    top: 32%;
+    left: 0%;
+    opacity: 0;
+}
+
+.five-top-qipao>img {
+    width: 100%;
+}
+
+.wenhao {
+    width: 64%;
+    height: 39%;
+    position: absolute;
+    top: 12%;
+    left: 12%;
+    opacity: 0;
+
+}
+
+.wenhao>img {
+    width: 100%;
+}
+
+.wenhaot {
+    animation: dong 1s forwards 1s;
+}
+
+/* 147*402 */
+.five-people {
+    width: 25%;
+    height: 60%;
+    position: absolute;
+    bottom: 20px;
+    left: 18%;
+}
+
+.five-people>img {
+    width: 100%;
+}
+
+/* 头147*179 587*575*/
+.five-top-head {
+    width: 100%;
+    height: 44%;
+    position: absolute;
+    top: 1%;
+    left: 16%;
+    opacity: 0;
+}
+
+.five-top-head>img {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.five-top-headt {
+    animation: opacrota 2s forwards 0.5s;
+    transform-origin: bottom center;
+}
+
+@keyframes opacrota {
+    0% {
+        opacity: 0;
+        transform: rotateX(0deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(-10deg);
+    }
+}
+
+/* 身99*223 */
+.five-top-body {
+    width: 67%;
+    height: 55%;
+    position: absolute;
+    top: 41%;
+    left: 33%;
+    opacity: 0;
+
+}
+
+.five-top-body>img {
+    width: 100%;
+}
+
+.five-top-bodyt {
+    animation: text1 1s forwards;
+}
+
+/* 背景下585*519 */
+.five-bottom-bg {
+    width: 91%;
+    height: 50%;
+    position: relative;
+    opacity: 0;
+    top: -5%;
+
+    /* 延迟6.5 */
+
+}
+
+.five-bottom-bg>img {
+    width: 100%;
+    position: absolute;
+    top: 5%;
+}
+
+.five-bottom-bgt {
+    animation: text1 1s forwards;
+}
+
+/* 人 350*380 */
+.five-bottom-body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* bottom: 3%; */
+    /* left: 26%; */
+    /* opacity: 0;*/
+}
+
+.five-bottom-body>img {
+    width: 100%;
+}
+
+.five-bottom-bodyt {
+    animation: text1 1s forwards linear;
+}
+
+@keyframes tela {
+    0% {
+        opacity: 0;
+        transform: translateX(3%);
+        /* transform: scale(0.5); */
+    }
+
+    25% {
+        opacity: 1;
+        transform: translateX(2%);
+        /* transform: scale(0.7); */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        /* transform: scale(1); */
+    }
+}
+
+/* 头 171*158 */
+.five-bottom-head {
+    width: 48%;
+    height: 41%;
+    position: absolute;
+    bottom: 57.5%;
+    right: 6%;
+    /* opacity: 0; */
+
+}
+
+.five-bottom-head>img {
+    width: 100%;
+}
+
+.five-bottom-headt {
+    animation: diantou 1s ease-in-out forwards 2 2.5s;
+    transform-origin: bottom center;
+}
+
+/* 350*380 */
+.r2 {
+    width: 59%;
+    height: 65%;
+    position: absolute;
+    top: 26%;
+    left: 20%;
+    opacity: 0;
+}
+
+/* 光 587*560 */
+.five-light {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    /* left: 5%;*/
+}
+
+.five-light>img {
+    width: 100%;
+}
+
+/* 奶20*34 */
+.five-AD {
+
+    width: 6%;
+    height: 8%;
+    position: absolute;
+    bottom: 37.5%;
+    opacity: 0;
+    right: 54.5%;
+
+}
+
+.five-AD>img {
+    width: 100%;
+}
+
+.five-ADt {
+    animation: text1 1s forwards linear 0.5s;
+}
+
+/* 气泡 163*114 587*575*/
+.five-qipao {
+    width: 28%;
+    height: 21%;
+    position: absolute;
+    top: 27%;
+    left: -1%;
+    opacity: 0;
+
+
+}
+
+.five-qipao>img {
+    width: 100%;
+}
+
+.five-qipaot {
+    animation: enter-x-left 1s ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateX(50px);
+}
+
+/* 字 134*67 */
+.five-text {
+    width: 76%;
+    height: 58%;
+    position: absolute;
+    bottom: 18%;
+    left: 14%;
+    opacity: 0;
+}
+
+.five-text>img {
+    width: 100%;
+}
+
+.five-textt {
+    animation: showtow 1s forwards;
+}
+
+/* 第六个页面 */
+.six-page {
+    background-color: #fcfbe8;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 10;
+}
+
+/* 上 */
+/* 背景 585*476 */
+.sixBg {
+    position: relative;
+    width: 91%;
+    height: 46%;
+    /* opacity: 0;*/
+}
+
+.six-top-bg {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 2%;
+    left: 0%;
+    opacity: 0;
+
+}
+
+.six-top-bg>img {
+    width: 100%;
+}
+
+.six-top-bgt {
+    animation: showtow 1s ease-in-out forwards;
+}
+
+/* 背景2 313*385 */
+.six-top-bg1 {
+    position: absolute;
+    width: 53%;
+    height: auto;
+    bottom: 0;
+    /* left: 4.5%; */
+    opacity: 0;
+    /* animation: showtow 1s ease-in-out forwards 1s; */
+}
+
+.six-top-bg1>img {
+    width: 100%;
+}
+
+/* 背景3 582*118 */
+.six-top-bg2 {
+    position: absolute;
+    width: 99%;
+    height: auto;
+    bottom: 0;
+    /* left: 4%; */
+    opacity: 0;
+    /* animation: showtow 1s ease-in-out forwards 1s; */
+}
+
+.six-top-bg2>img {
+    width: 100%;
+}
+
+/* 背景4  161*78*/
+.six-top-bg3 {
+    position: absolute;
+    width: 27%;
+    height: auto;
+    top: 83%;
+    right: 0;
+    opacity: 0;
+    /* animation: showtow 1s ease-in-out forwards 1s; */
+}
+
+.six-top-bg3>img {
+    width: 100%;
+}
+
+.r3 {
+    opacity: 0;
+    height: 21%;
+}
+
+/* 苏轼 217*291 585*476*/
+.six-top-su {
+    position: absolute;
+    width: 37%;
+    height: 61%;
+    bottom: 10%;
+    left: 13%;
+    opacity: 0;
+    /* animation: showtow 1s  forwards 1s ; */
+}
+
+.six-top-su>img {
+    width: 100%;
+}
+
+/* 张怀民身 224*150 */
+.six-top-zhangbody {
+    position: absolute;
+    width: 38%;
+    height: 61%;
+    bottom: 10%;
+    left: 47%;
+    opacity: 0;
+
+}
+
+.six-top-zhang {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    /* opacity: 0; */
+}
+
+.six-top-zhang>img {
+    width: 100%;
+}
+
+.six-top-zhangt {
+    animation: showtow 1s forwards;
+
+}
+
+/* 头 167*152 */
+.six-top-zhang-head {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+
+}
+
+.six-top-zhang-head>img {
+    height: 100%;
+    position: absolute;
+    left: 15%;
+    bottom: -6%;
+
+}
+
+.six-top-zhang-headt {
+    animation: diantou 1s ease-in-out forwards 2 1.8s;
+    transform-origin: bottom center;
+}
+
+@keyframes diantou {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        /* transform: rotate(0deg); */
+    }
+}
+
+/* 气泡左 154*119 */
+.six-qipao1 {
+    position: absolute;
+    width: 24%;
+    height: 11%;
+    top: 10%;
+    left: 2%;
+    opacity: 0;
+
+}
+
+.six-qipao1>img {
+    width: 100%;
+}
+
+.six-qipao1t {
+    animation: enter-x-left 1s ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateX(-50px);
+}
+
+/* 左字 122*87 */
+.six-text1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 11%;
+    left: 4%;
+    opacity: 0;
+
+}
+
+.six-text1>img {
+    width: 81%;
+}
+
+.six-text1t {
+    animation: showtow 1s forwards;
+}
+
+/* 气泡右 157*122*/
+.six-qipao2 {
+    position: absolute;
+    width: 24%;
+    height: 23%;
+    top: 12%;
+    right: 8%;
+    opacity: 0;
+
+}
+
+.six-qipao2>img {
+    width: 100%;
+}
+
+.six-qipao2t {
+    animation: enter-x-left 1s ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateX(50px);
+}
+
+/* 右字 82*50 */
+.six-text2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.six-text2>img {
+    width: 76%;
+}
+
+.six-text2t {
+    animation: showtow 1s forwards;
+}
+
+/* ad 115*79 */
+.six-top-AD {
+    position: absolute;
+    width: 18%;
+    height: 15%;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+.six-top-AD>img {
+    width: 100%;
+}
+
+/* 下 */
+
+/* 背景583*476 */
+.six-bottom-bg {
+    position: relative;
+    width: 91%;
+    height: 46%;
+    opacity: 0;
+
+}
+
+.six-bottom-bg>img {
+    width: 100%;
+}
+
+.six-bottom-bgt {
+    animation: text1 1s forwards;
+}
+
+/* 气泡左148*128 */
+.six-qipao3 {
+    position: absolute;
+    width: 23%;
+    height: 19%;
+    left: 1%;
+    top: 0%;
+    opacity: 0;
+
+}
+
+.six-qipao3>img:first-child {
+    width: 100%;
+}
+
+.six-qipao3t {
+    animation: enter-x-left 1s ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateX(-50px);
+}
+
+/* 字 118*89 */
+.six-text3 {
+    position: absolute;
+    left: 3%;
+    top: 4%;
+    width: 81%;
+
+}
+
+.six-text3>img {
+    width: 100%;
+}
+
+.six-text3t {
+    animation: showtow 1s forwards;
+}
+
+/* 气泡右 210*165 */
+.six-qipao4 {
+    position: absolute;
+    width: 32%;
+    height: 16%;
+    right: 1%;
+    top: 0%;
+    opacity: 0;
+
+}
+
+.six-qipao4>img:first-child {
+    width: 100%;
+}
+
+.six-qipao4t {
+    animation: enter-x-left 1s ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateX(-50px);
+}
+
+/* 字 118*29 */
+.six-text4 {
+    position: absolute;
+    top: 56%;
+    left: 11%;
+    width: 70%;
+    opacity: 0;
+    /* animation: showtow 1s  backwards 10.5s ; */
+}
+
+.six-text4>img {
+    width: 100%;
+}
+
+.six-text4t {
+    animation: showtow 1s backwards;
+}
+
+/* 字2 179*65*/
+.six-text5 {
+    position: absolute;
+    width: 76%;
+    top: 47%;
+    left: 10%;
+    opacity: 0;
+}
+
+.six-text5>img {
+    width: 100%;
+}
+
+.six-text5t {
+    animation: showtow 1s forwards;
+}
+
+/* 星1 9*9 */
+.star1 {
+    position: absolute;
+    width: 1.4%;
+    height: 0.8%;
+    left: 21%;
+    bottom: 47%;
+    opacity: 0;
+}
+
+.star1>img {
+    width: 100%;
+}
+
+.star2>img {
+    width: 100%;
+}
+
+.star3>img {
+    width: 100%;
+}
+
+.star4>img {
+    width: 100%;
+}
+
+.star5>img {
+    width: 100%;
+}
+
+.star6>img {
+    width: 100%;
+}
+
+.start {
+    animation: showtow 0.8s forwards infinite;
+}
+
+.star4 {
+    position: absolute;
+    width: 1.4%;
+    height: 0.8%;
+    left: 29%;
+    bottom: 39%;
+    opacity: 0;
+    /* animation: showtow 0.8s  forwards infinite ; */
+}
+
+/* 星2 10*9 */
+.star2 {
+    position: absolute;
+    width: 1.5%;
+    height: 0.8%;
+    left: 29%;
+    bottom: 44%;
+    opacity: 0;
+    /* animation: showtow 0.8s  forwards infinite ; */
+}
+
+.star5 {
+    position: absolute;
+    width: 1.5%;
+    height: 0.8%;
+    left: 25%;
+    bottom: 45%;
+    opacity: 0;
+    /* animation: showtow 0.8s  forwards infinite ; */
+}
+
+/* 星3 6*7 */
+.star3 {
+    position: absolute;
+    width: 0.9%;
+    height: 0.6%;
+    left: 21%;
+    bottom: 42%;
+    opacity: 0;
+    /* animation: showtow 0.8s  forwards infinite; */
+}
+
+.star6 {
+    position: absolute;
+    width: 0.9%;
+    height: 0.6%;
+    left: 20%;
+    bottom: 45%;
+    opacity: 0;
+    /* animation: showtow 0.8s  forwards infinite; */
+}
+
+/* 第七页 */
+.seven-page {
+    background-color: #fcfbe8;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 9;
+}
+
+/* 上背景 585*381 */
+.seven-top-bg {
+    width: 91%;
+    height: 37%;
+    position: relative;
+    opacity: 0;
+}
+
+.seven-top-bg>img {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: contain;
+    position: absolute;
+    bottom: 0%;
+}
+
+.seven-top-bgt {
+    animation: text1 1s forwards;
+}
+
+/* 上人 189*297 */
+.seven-people {
+    position: absolute;
+    width: 29%;
+    height: 52%;
+    bottom: 0%;
+    left: 24%;
+
+    opacity: 0;
+}
+
+.seven-people>img {
+    height: 100%;
+}
+
+.seven-peoplet {
+    animation: text1 1s forwards;
+}
+
+.r {
+
+    opacity: 0;
+}
+
+.rt {
+    animation: person 2s forwards;
+}
+
+.r1 {
+    /* animation: person 2s forwards ;  */
+    opacity: 0;
+}
+
+/* 上风车 41*41 */
+.fengche {
+    position: absolute;
+    width: 35px;
+    height: 41px;
+    transform-origin: center center;
+    bottom: 19%;
+    right: 45%;
+    opacity: 0;
+}
+
+.fengche>img {
+    width: 100%;
+}
+
+.fengchet {
+    animation: xuanzhuan 1s linear infinite;
+}
+
+@keyframes xuanzhuan {
+    0% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+}
+
+/* 中背景1 434*387 */
+.sevenBg {
+    width: 91%;
+    height: 37%;
+    position: relative;
+}
+
+.seven-center-bg1 {
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+
+}
+
+.seven-center-bg1>img {
+    width: 100%;
+    height: 100%;
+}
+
+.seven-center-bg1t {
+    animation: enter-x-left 1s ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateX(-50px);
+}
+
+/* 中背景1人382*295 */
+.seven-people1 {
+    position: absolute;
+    width: 90%;
+    bottom: -2%;
+    left: -6%;
+    opacity: 0;
+}
+
+.seven-people1>img {
+    width: 100%;
+}
+
+.seven-people1t {
+    animation: text1 1s forwards;
+}
+
+.seven-center-bg2right {
+    width: 42%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+
+/* 中背景2 241*288 */
+.seven-center-bg2 {
+    position: absolute;
+    width: 100%;
+    height: 57%;
+    right: 0%;
+    opacity: 0;
+
+}
+
+.seven-center-bg2>img {
+    width: 100%;
+    width: 100%;
+    position: absolute;
+    top: -6%;
+
+}
+
+.seven-center-bg2t {
+    animation: enter-x-left 1s ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateX(50px);
+}
+
+/* 风筝 */
+
+.fengzheng-f {
+    width: 30%;
+    height: 42%;
+    position: absolute;
+    left: 9%;
+    top: 71%;
+    transform: rotate(5deg);
+
+}
+
+/* 中背景3 241*97 */
+.seven-center-bg3 {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: 4%;
+    right: 0%;
+    opacity: 0;
+
+}
+
+.seven-center-bg3>img {
+    width: 100%;
+}
+
+.seven-center-bg3t {
+    animation: enter-x-left 1s ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateX(50px);
+}
+
+/* 中背景2 风筝 276*216 */
+.fengzheng {
+
+    width: 108%;
+    position: absolute;
+    opacity: 0;
+
+}
+
+.fengzheng>img {
+    width: 100%;
+}
+
+.fengzhengt {
+    animation: shake1 2s linear infinite;
+    transform-origin: center center;
+}
+
+@keyframes shake1 {
+    0% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        opacity: 1;
+
+        transform: rotate(-3deg);
+    }
+
+    50% {
+        opacity: 1;
+
+        transform: rotate(0deg);
+    }
+
+    75% {
+        opacity: 1;
+
+        transform: rotate(-3deg);
+    }
+
+    100% {
+
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+/* 中背景2 陀螺 98*111 */
+.tuoluo {
+    position: absolute;
+    width: 48%;
+    height: 32%;
+    bottom: 0%;
+    right: 4%;
+    opacity: 0;
+
+}
+
+.tuoluo>img {
+    width: 100%;
+}
+
+.tuoluot {
+    animation: shake1 2s linear forwards infinite;
+    transform-origin: center center;
+}
+
+/* 中背景2 风车 棍子 77*78 28*118 */
+
+.fengche2 {
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    z-index: 2;
+}
+
+.fengche2>img {
+    width: 100%;
+}
+
+.fengche2t {
+    animation: xuanzhuan 1s linear infinite;
+
+}
+
+.gunzi {
+    position: absolute;
+    width: 44%;
+    height: 11%;
+    top: 13%;
+    left: 9%;
+    opacity: 0;
+
+}
+
+.gunzi>img {
+    width: 100%;
+}
+
+.gunzit {
+    animation: shake1 2s linear forwards infinite;
+    transform-origin: center center;
+}
+
+/* 下背景 587*199 */
+.seven-bottom-bg {
+    width: 91%;
+    height: 19%;
+    position: relative;
+    opacity: 0;
+}
+
+.seven-bottom-bg>img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 5%;
+}
+
+.seven-bottom-bgt {
+    animation: text1 1s forwards;
+}
+
+/* 花 30*27 43*26 38*33 34*22 */
+.flower1 {
+    position: absolute;
+    width: 4%;
+    height: 2%;
+    bottom: 20%;
+    left: 40%;
+    opacity: 0;
+}
+
+.flower1>img {
+    width: 100%;
+}
+
+.flowerstar {
+    /* animation: showtow 1s  forwards infinite ; */
+    animation: star 1s forwards infinite;
+}
+
+.flowerstar1 {
+    /* animation: showtow 1s  forwards infinite ; */
+    animation: star 1s forwards infinite;
+}
+
+@keyframes star1 {
+    0% {
+        opacity: 1;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(0.8);
+    }
+}
+
+.flower2 {
+    position: absolute;
+    width: 6%;
+    height: 2%;
+    bottom: 8%;
+    left: 86%;
+    opacity: 0;
+}
+
+.flower3 {
+    position: absolute;
+    width: 5%;
+    height: 3%;
+    bottom: 5%;
+    left: 81%;
+    opacity: 0;
+}
+
+.flower4 {
+    position: absolute;
+    width: 5%;
+    height: 2%;
+    bottom: 3%;
+    left: 3%;
+    opacity: 0;
+}
+
+.flower2>img {
+    width: 100%;
+}
+
+.flower3>img {
+    width: 100%;
+}
+
+.flower4>img {
+    width: 100%;
+}
+
+/* ad 74*196 75*198 87*207 */
+.ad1 {
+    position: absolute;
+    height: 100%;
+    top: 13%;
+    left: 7%;
+    opacity: 0;
+
+}
+
+
+.adt {
+    animation: shake1 2s linear forwards infinite;
+    transform-origin: center center;
+}
+
+.ad2 {
+    position: absolute;
+    height: 100%;
+    left: 32.5%;
+    top: 13%;
+    opacity: 0;
+}
+
+.ad3 {
+    position: absolute;
+    height: 100%;
+    top: 15%;
+    left: 20.1%;
+    opacity: 0;
+}
+
+.ad-img {
+    height: 100%;
+}
+
+/* 樱桃 76*73 */
+.cherry {
+    position: absolute;
+    width: 11%;
+    height: 7%;
+    top: 10%;
+    right: 8%;
+    opacity: 0;
+}
+
+.cherry>img {
+    width: 100%;
+}
+
+/* 茶 117*71 */
+.tea {
+    position: absolute;
+    width: 18%;
+    height: 6%;
+    right: 22%;
+    top: 10%;
+    opacity: 0;
+
+}
+
+.tea>img {
+    width: 100%;
+}
+
+/* 橘子66*77 */
+.orange {
+    position: absolute;
+    width: 10%;
+    height: 7%;
+    top: 10%;
+    right: 41%;
+    opacity: 0;
+
+}
+
+.orange>img {
+    width: 100%;
+}
+
+/* 火锅141*145 */
+.pot {
+    position: absolute;
+    width: 22%;
+    height: 14%;
+    top: 44%;
+    right: 24%;
+    opacity: 0;
+
+}
+
+.pot>img {
+    width: 100%;
+}
+
+/* 星星 31*31 11*10 19*19 11*11 22*22 22*21 22*21 11*11 22*22 10*11 11*11 17*16 */
+.sstar {
+    position: absolute;
+    width: 4.8%;
+    height: 3%;
+    top: 18%;
+    left: 7%;
+    opacity: 0;
+}
+
+@keyframes star {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.sstar1 {
+    position: absolute;
+    width: 1.7%;
+    height: 1%;
+    top: 44%;
+    left: 76%;
+    opacity: 0;
+}
+
+.sstar2 {
+    position: absolute;
+    width: 3%;
+    height: 2%;
+    bottom: 10%;
+    left: 81%;
+    opacity: 0;
+}
+
+.sstar3 {
+    position: absolute;
+    width: 1.7%;
+    height: 1%;
+    top: 83%;
+    left: 94%;
+    opacity: 0;
+}
+
+.sstar4 {
+    position: absolute;
+    width: 3.4%;
+    height: 2%;
+    top: 47%;
+    left: 49%;
+    opacity: 0;
+
+}
+
+.sstar5 {
+    position: absolute;
+    width: 3.4%;
+    height: 2%;
+    top: 8%;
+    left: 82%;
+    opacity: 0;
+
+}
+
+.sstar6 {
+    position: absolute;
+    width: 3.4%;
+    height: 2%;
+    top: 76%;
+    left: 50%;
+    opacity: 0;
+
+}
+
+.sstar7 {
+    position: absolute;
+    width: 1.7%;
+    height: 1%;
+    top: 40%;
+    left: 4%;
+    opacity: 0;
+
+}
+
+.sstar8 {
+    position: absolute;
+    width: 3.4%;
+    height: 2%;
+    top: 9%;
+    left: 60%;
+    opacity: 0;
+
+}
+
+.sstar9 {
+    position: absolute;
+    width: 1.5%;
+    height: 1%;
+    top: 20%;
+    left: 57%;
+    opacity: 0;
+
+}
+
+.sstar10 {
+    position: absolute;
+    width: 1.7%;
+    height: 1%;
+    top: 63%;
+    left: 7%;
+    opacity: 0;
+
+}
+
+.sstar11 {
+    position: absolute;
+    width: 2.6%;
+    height: 1.5%;
+    top: 64%;
+    right: 12%;
+    opacity: 0;
+
+}
+
+.sstar>img {
+    width: 100%;
+}
+
+.sstar1>img {
+    width: 100%;
+}
+
+.sstar2>img {
+    width: 100%;
+}
+
+.sstar3>img {
+    width: 100%;
+}
+
+.sstar4>img {
+    width: 100%;
+}
+
+.sstar5>img {
+    width: 100%;
+}
+
+.sstar6>img {
+    width: 100%;
+}
+
+.sstar7>img {
+    width: 100%;
+}
+
+.sstar8>img {
+    width: 100%;
+}
+
+.sstar9>img {
+    width: 100%;
+}
+
+.sstar10>img {
+    width: 100%;
+}
+
+.sstar11>img {
+    width: 100%;
+}
+
+/* 八 */
+.eight-page {
+    background-color: #fcfbe8;
+    /* background-color: pink; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 8;
+}
+
+/* 背景上 589*417 */
+.eight-top-bg {
+    width: 92%;
+    height: 40%;
+    position: relative;
+    opacity: 0;
+
+}
+
+.eight-top-bg>img {
+    width: 100%;
+}
+
+.eight-top-bgt {
+    animation: text1 1s forwards;
+}
+
+/* 人 347*408 */
+.eight-people {
+    width: 54%;
+    height: 88%;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+    opacity: 0;
+
+}
+
+.eight-people>img {
+    width: 100%;
+}
+
+.eight-peoplet {
+    animation: text1 1s forwards;
+}
+
+/* 燕子 133*145 71*103  */
+.bird1 {
+    height: 33%;
+    position: absolute;
+    top: 2%;
+    right: -7%;
+    opacity: 0;
+
+}
+
+.birdt {
+    animation: yanzi 2s linear forwards;
+}
+
+@keyframes yanzi {
+    25% {
+        opacity: 1;
+        transform: translate(-10px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(-20px);
+    }
+
+    75% {
+        opacity: 1;
+        transform: translate(-30px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-30px);
+    }
+}
+
+.bird2 {
+    width: 17%;
+    height: 23%;
+    position: absolute;
+    left: 14%;
+    top: 5%;
+    opacity: 0;
+
+}
+
+.bird1>img {
+    height:  100%;
+}
+
+.bird2>img {
+    height: 100%;
+}
+
+.eight-bottom {
+    width: 92%;
+    height: 50%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 背景左 348*531 */
+.eight-b-l {
+    width: 54%;
+    height: 100%;
+}
+
+.eight-left-bg {
+    width: 54%;
+    height: 77%;
+    position: absolute;
+
+    opacity: 0;
+
+}
+
+.eight-left-bg>img {
+    width: 100%;
+}
+
+.eight-left-bgt {
+    animation: enter-x-left 1s ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateX(-50px);
+}
+
+/* 左人 310*471 */
+.eight-left-people {
+    width: 48%;
+    height: 62%;
+    position: absolute;
+    opacity: 0;
+
+}
+
+.eight-left-people>img {
+    width: 100%;
+}
+
+.eight-left-peoplet {
+    animation: yaohuang 2s linear forwards;
+    transform-origin: top;
+}
+
+/* .r5{
+    opacity: 1;
+} */
+@keyframes yaohuang {
+    25% {
+        transform: skew(-3deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: skew(0deg);
+        opacity: 1;
+    }
+
+    75% {
+        transform: skew(3deg);
+        opacity: 1;
+
+    }
+
+    100% {
+        transform: skew(-3deg);
+        opacity: 1;
+    }
+}
+
+.eight-b-r {
+    width: 40%;
+    height: 73%; 
+    /* 100 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 右背景 212*158 */
+.eight-right-bg1 {
+    width: 100%;
+    height: 32%;
+    /* 28 */
+    position: relative;
+    opacity: 0;
+    top: 4%;
+}
+
+.eight-right-bg1>img {
+    width: 100%;
+    height: 100%;
+}
+
+.eight-right-bgt {
+    animation: enter-x-left 1s ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateX(50px);
+}
+
+/* 弹弓 226*179 */
+.dangong {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 5.6%;
+    top: 0%;
+    opacity: 0;
+}
+
+.dangong>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 右背景2 214*200 */
+.eight-right-bg2 {
+    width: 100%;
+    height: 38%;
+    position: relative;
+    opacity: 0;
+    top: 5%;
+}
+
+.eight-right-bg2>img {
+    width: 100%;
+}
+
+/* 棉花 197*189 */
+.mianhua {
+    width: 90%;
+    height: 18%;
+    position: absolute;
+    top: 9%;
+    left: 6%;
+    opacity: 0;
+}
+
+.mianhua>img {
+    width: 100%;
+}
+
+.nineplay {
+    animation: shake1 2s linear forwards infinite;
+    transform-origin: center center;
+}
+
+/* 右背景下 214*102  */
+.eight-right-bg3 {
+    width: 100%;
+    height: 35%;
+    /* 18 */
+    position: relative;
+    opacity: 0;
+    top: 25%;
+}
+
+.eight-right-bg3>img {
+    width: 100%;
+    /* height: 100%; */
+}
+
+/* 糖葫芦 145*109 198*85  */
+.candy {
+    width: 75%;
+    position: absolute;
+    right: 3%;
+    TOP: 2%;
+    opacity: 0;
+    left: 35%;
+}
+
+.candy1 {
+    width: 98%;
+    position: absolute;
+    bottom: TOP;
+    opacity: 0;
+    top: 37%;
+    left: 2%;
+}
+
+.candy>img {
+    width: 100%;
+}
+
+.candy1>img {
+    width: 100%;
+}
+
+/* 花 43*26 42*26  */
+.eight-flower1 {
+    width: 8%;
+    height: 2%;
+    position: absolute;
+    right: 36%;
+    bottom: 75%;
+    opacity: 0;
+
+}
+
+.eight-flower2 {
+    width: 7%;
+    height: 2%;
+    position: absolute;
+    right: -3%;
+    bottom: 72%;
+    opacity: 0;
+}
+
+.eight-flower1>img {
+    width: 100%;
+}
+
+.eight-flower2>img {
+    width: 100%;
+}
+
+/* 星星 60*60 19*18  23*24 13*12 12*12 13*12 */
+.eight-star1 {
+    width: 9%;
+    height: 5%;
+    position: absolute;
+    right: -3.5%;
+    bottom: 93%;
+    opacity: 0;
+}
+
+.eight-star2 {
+    width: 3%;
+    height: 1.7%;
+    position: absolute;
+    right: 33%;
+    bottom: 68%;
+    opacity: 0;
+}
+
+.eight-star3 {
+    width: 3.5%;
+    height: 2%;
+    position: absolute;
+    right: 12%;
+    bottom: 29%;
+    opacity: 0;
+}
+
+.eight-star4 {
+    width: 2%;
+    height: 1%;
+    position: absolute;
+    right: 38.8%;
+    bottom: 22%;
+    opacity: 0;
+}
+
+.eight-star5 {
+    width: 2.8%;
+    height: 1%;
+    position: absolute;
+    right: 5%;
+    bottom: 25%;
+    opacity: 0;
+}
+
+.eight-star6 {
+    width: 2%;
+    height: 1%;
+    position: absolute;
+    right: 32%;
+    bottom: 28%;
+    opacity: 0;
+}
+
+.eight-star1>img {
+    width: 100%;
+}
+
+.eight-star2>img {
+    width: 100%;
+}
+
+.eight-star3>img {
+    width: 100%;
+}
+
+.eight-star4>img {
+    width: 100%;
+}
+
+.eight-star5>img {
+    width: 100%;
+}
+
+.eight-star6>img {
+    width: 100%;
+}
+
+/* 九 */
+.nine-page {
+    background-color: #fcfbe8;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 7;
+}
+
+/* 背景 583*968 */
+.nine-bg {
+    position: relative;
+    width: calc(100% - 28px);
+    /* opacity: 0; */
+    /* animation: text1 1s forwards; */
+}
+
+.nine-bg>img {
+    width: 100%;
+}
+
+.nine1t {
+    animation: text1 1s forwards;
+}
+
+
+/* AD钙底部椭圆 486*75 486*69 */
+/* 从小到大 */
+/* 改了 */
+.oval1 {
+    width: 100%;
+    /* opacity: 0; */
+}
+
+/* 改了 */
+.oval2 {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 5px;
+    /* opacity: 0; */
+}
+
+.oval1>img {
+    width: 100%;
+}
+
+.oval2>img {
+    width: 100%;
+}
+
+/* AD钙 146*388 146*385 172*410 */
+/* 改了 */
+.nine-ad1 {
+    width: 32%;
+    /* opacity: 0; */
+}
+
+/* 改了 */
+.nine-ad3 {
+    width: 32%;
+    /* opacity: 0; */
+
+}
+
+/* 改了 */
+.nine-ad2 {
+    width: 36%;
+    /* opacity: 0; */
+
+}
+
+/* 改了 */
+.nine-ad1>img {
+    width: 100%;
+}
+
+/* 改了 */
+.nine-ad2>img {
+    width: 100%;
+}
+
+/* 改了 */
+.nine-ad3>img {
+    width: 100%;
+}
+
+/* 口味 102*25 60*30 75*27 */
+/* 改了 */
+.taste1 {
+    position: absolute;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    left: 2px;
+    top: 2px;
+    opacity: 0;
+    animation: text1 1s forwards 1s;
+}
+
+/* 改了 */
+.taste2 {
+    position: absolute;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    left: 2px;
+    top: 2px;
+    opacity: 0;
+    animation: text1 1s forwards 2s;
+}
+
+/* 改了 */
+.taste3 {
+    position: absolute;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    left: 2px;
+    top: 2px;
+    opacity: 0;
+    animation: text1 1s forwards 3s;
+}
+
+/* 改了 */
+.taste1>img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 改了 */
+.taste2>img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 改了 */
+.taste3>img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 人 150*175 145*171 */
+.nine-people1 {
+    position: absolute;
+    width: 23%;
+    height: 16%;
+    left: 24%;
+    bottom: 11%;
+    /* opacity: 0; */
+    animation: shake 2s linear infinite;
+}
+
+@keyframes shake2 {
+    0% {
+        opacity: 1;
+        transform: rotate(-5deg);
+    }
+
+    25% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(-5deg);
+    }
+}
+
+/* .nineshake{
+    animation: shake 1s linear infinite;
+} */
+
+.nine-people2 {
+    position: absolute;
+    width: 22%;
+    height: 16%;
+    right: 26%;
+    bottom: 11%;
+    /* opacity: 0; */
+    animation: shake 2s linear infinite;
+}
+
+.nine-people1>img {
+    width: 100%;
+}
+
+.nine-people2>img {
+    width: 100%;
+}
+
+/* 白框 116*42 */
+/* 改了 */
+.frame1 {
+    margin-bottom: 15px;
+    width: 60px;
+    height: 22px;
+    opacity: 0;
+    animation: text1 1s forwards 2s;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+
+/* 改了 */
+.frame2 {
+    margin-bottom: 15px;
+    width: 40px;
+    height: 25px;
+    opacity: 0;
+    animation: text1 1s forwards 1s;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+
+/* 改了 */
+.frame3 {
+    margin-bottom: 15px;
+    width: 60px;
+    height: 22px;
+    opacity: 0;
+    animation: text1 1s forwards 3s;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.frame1>img {
+    width: 100%;
+    height: 100%;
+}
+
+.frame2>img {
+    width: 100%;
+    height: 100%;
+}
+
+.frame3>img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 星星 25*25 70*69 60*60 41*41 62*62 60*59 41*41 34*33 34*34 23*23 23*23 */
+.nine-star1 {
+    position: absolute;
+    width: 3.9%;
+    height: 2.4%;
+    left: 8%;
+    top: 67%;
+    /* opacity: 0; */
+    animation: star 1s forwards infinite;
+}
+
+.nine-star2 {
+    position: absolute;
+    width: 10%;
+    height: 6.6%;
+    left: 14%;
+    top: 20%;
+    /* opacity: 0; */
+    animation: star 1s forwards infinite;
+}
+
+.nine-star3 {
+    position: absolute;
+    width: 9.3%;
+    height: 5.8%;
+    left: 83%;
+    top: 23%;
+    /* opacity: 0; */
+    animation: star 1s forwards infinite;
+}
+
+.nine-star4 {
+    position: absolute;
+    width: 6.4%;
+    height: 4%;
+    left: 45%;
+    top: 81%;
+    /* opacity: 0; */
+    animation: star 1s forwards infinite;
+}
+
+.nine-star5 {
+    position: absolute;
+    width: 9.6%;
+    height: 6%;
+    left: 84%;
+    top: 65%;
+    /* opacity: 0; */
+    animation: star 1s forwards infinite;
+}
+
+.nine-star6 {
+    position: absolute;
+    width: 9%;
+    height: 5.7%;
+    left: 11%;
+    top: 79%;
+    /* opacity: 0; */
+    animation: star 1s forwards infinite;
+}
+
+.nine-star7 {
+    position: absolute;
+    width: 6.4%;
+    height: 4%;
+    left: 60%;
+    top: 21%;
+    /* opacity: 0; */
+    animation: star 1s forwards infinite;
+}
+
+.nine-star8 {
+    position: absolute;
+    width: 5.3%;
+    height: 3.2%;
+    left: 7%;
+    top: 61%;
+    /* opacity: 0; */
+    animation: star 1s forwards infinite;
+}
+
+.nine-star9 {
+    position: absolute;
+    width: 5.3%;
+    height: 3.3%;
+    left: 31%;
+    top: 17%;
+    /* opacity: 0; */
+    animation: star 1s forwards infinite;
+}
+
+.nine-star10 {
+    position: absolute;
+    width: 3.5%;
+    height: 2.2%;
+    left: 6%;
+    top: 27%;
+    /* opacity: 0; */
+    animation: star 1s forwards infinite;
+
+
+}
+
+.nine-star11 {
+    position: absolute;
+    width: 3.5%;
+    height: 2.2%;
+    left: 88%;
+    top: 43%;
+    /* opacity: 0; */
+    animation: star 1s forwards infinite;
+}
+.nine-star1 > img{
+    width: 100%;
+}
+.nine-star2 > img{
+    width: 100%;
+}
+.nine-star3 > img{
+    width: 100%;
+}
+.nine-star4 > img{
+    width: 100%;
+}
+.nine-star5 > img{
+    width: 100%;
+}
+.nine-star6 > img{
+    width: 100%;
+}
+.nine-star7 > img{
+    width: 100%;
+}
+.nine-star8 > img{
+    width: 100%;
+}
+.nine-star9 > img{
+    width: 100%;
+}
+.nine-star10 > img{
+    width: 100%;
+}
+.nine-star11 > img{
+    width: 100%;
+}
+/* 字392*31 */
+.nine-text {
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    bottom: -46px;
+    /* opacity: 0; */
+
+}
+
+.nine-text>img {
+    width: 100%;
+}
+
+/* logo 199*65 */
+/* 改了 */
+.logo {
+    width: 31%;
+    position: absolute;
+    right: 16px;
+    top: 10px;
+    /* opacity: 0; */
+
+}
+
+.logo>img {
+    width: 100%;
+}
+
+/* 改了 */
+.adContent {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: flex-end;
+    width: 70%;
+}
+
+/* 改了 */
+.ovalContent {
+    width: calc(100% + 20px);
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    z-index: -1;
+}
