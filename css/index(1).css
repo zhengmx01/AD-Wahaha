@@ -6,31 +6,46 @@
 }
 
 body {
-    width: 100vw;
+    /* width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    overflow: hidden; */
     /* display: flex;
     justify-content: center;
     align-items: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
-
-.content {
-    width: 640px;
-    height: 1030px;
+.content{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+ul{
+    width:100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
-
 .content>li {
-    /* width: 100%;
-    height: 100%; */
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
-    left: 0;
-    top: 0;
+    /* width: 100vw;
+    height: 100vh; */
+    position: absolute;
+    /* left: 0;
+    top: 0; */
 }
 
 .music {
@@ -1486,7 +1501,7 @@ body {
     width: 25%;
     height: 60%;
     position: absolute;
-    bottom: 20px;
+    bottom: 6%;
     left: 18%;
 }
 
@@ -1540,6 +1555,7 @@ body {
 
 .five-top-body>img {
     width: 100%;
+    height: 100%;
 }
 
 .five-top-bodyt {
@@ -2087,10 +2103,10 @@ body {
 /* 星1 9*9 */
 .star1 {
     position: absolute;
-    width: 1.4%;
-    height: 0.8%;
-    left: 21%;
-    bottom: 47%;
+    width: 2.4%;
+    /* height: 0.8%; */
+    left: 20%;
+    margin-top: -35%;
     opacity: 0;
 }
 
@@ -2124,10 +2140,10 @@ body {
 
 .star4 {
     position: absolute;
-    width: 1.4%;
+    width: 2.4%;
     height: 0.8%;
     left: 29%;
-    bottom: 39%;
+    margin-top: -33%;
     opacity: 0;
     /* animation: showtow 0.8s  forwards infinite ; */
 }
@@ -2135,20 +2151,20 @@ body {
 /* 星2 10*9 */
 .star2 {
     position: absolute;
-    width: 1.5%;
+    width: 2.5%;
     height: 0.8%;
     left: 29%;
-    bottom: 44%;
+    margin-top: -29%;
     opacity: 0;
     /* animation: showtow 0.8s  forwards infinite ; */
 }
 
 .star5 {
     position: absolute;
-    width: 1.5%;
+    width: 2.5%;
     height: 0.8%;
-    left: 25%;
-    bottom: 45%;
+    left: 31%;
+    margin-top: -31%;
     opacity: 0;
     /* animation: showtow 0.8s  forwards infinite ; */
 }
@@ -2156,20 +2172,20 @@ body {
 /* 星3 6*7 */
 .star3 {
     position: absolute;
-    width: 0.9%;
+    width: 2.9%;
     height: 0.6%;
-    left: 21%;
-    bottom: 42%;
+    left: 19%;
+    margin-top: -31%;
     opacity: 0;
     /* animation: showtow 0.8s  forwards infinite; */
 }
 
 .star6 {
     position: absolute;
-    width: 0.9%;
+    width: 2.9%;
     height: 0.6%;
-    left: 20%;
-    bottom: 45%;
+    left: 22%;
+    margin-top: -25%;
     opacity: 0;
     /* animation: showtow 0.8s  forwards infinite; */
 }
@@ -2186,9 +2202,10 @@ body {
 /* 上背景 585*381 */
 .seven-top-bg {
     width: 91%;
-    height: 37%;
+    /* height: 37%; */
     position: relative;
     opacity: 0;
+    margin-top: 58%;
 }
 
 .seven-top-bg>img {
@@ -2207,15 +2224,14 @@ body {
 .seven-people {
     position: absolute;
     width: 29%;
-    height: 52%;
-    bottom: 0%;
+    /* height: 52%; */
+    bottom: -29%;
     left: 24%;
-
     opacity: 0;
 }
 
 .seven-people>img {
-    height: 100%;
+    width: 100%;
 }
 
 .seven-peoplet {
@@ -2239,11 +2255,11 @@ body {
 /* 上风车 41*41 */
 .fengche {
     position: absolute;
-    width: 35px;
-    height: 41px;
+    width: 6%;
+    /* height: 5%; */
     transform-origin: center center;
-    bottom: 19%;
-    right: 45%;
+    margin-top: -26%;
+    margin-left: 50%;
     opacity: 0;
 }
 
@@ -2276,11 +2292,9 @@ body {
 
 .seven-center-bg1 {
     position: absolute;
-    width: 70%;
-    height: 100%;
+    width: 71%;
+    /* height: 5%; */
     opacity: 0;
-    z-index: 2;
-
 }
 
 .seven-center-bg1>img {
@@ -2321,15 +2335,15 @@ body {
 /* 中背景2 241*288 */
 .seven-center-bg2 {
     position: absolute;
-    width: 100%;
-    height: 57%;
+    width: 41%;
+    height: 53%;
     right: 0%;
     opacity: 0;
-
+    margin-top: 0%;
 }
 
 .seven-center-bg2>img {
-    width: 100%;
+    height: 100%;
     width: 100%;
     position: absolute;
     top: -6%;
@@ -2357,11 +2371,12 @@ body {
 /* 中背景3 241*97 */
 .seven-center-bg3 {
     position: absolute;
-    width: 100%;
+    width: 41%;
     height: 20%;
-    bottom: 4%;
+    margin-top: 46%;
     right: 0%;
     opacity: 0;
+    z-index: -1;
 
 }
 
@@ -2377,11 +2392,10 @@ body {
 
 /* 中背景2 风筝 276*216 */
 .fengzheng {
-
     width: 108%;
     position: absolute;
     opacity: 0;
-
+    margin-top: -15%;
 }
 
 .fengzheng>img {
@@ -2487,6 +2501,7 @@ body {
     height: 19%;
     position: relative;
     opacity: 0;
+    top: -5%;
 }
 
 .seven-bottom-bg>img {
@@ -2873,7 +2888,7 @@ body {
     height: 40%;
     position: relative;
     opacity: 0;
-
+    top: 7%;
 }
 
 .eight-top-bg>img {
@@ -2961,24 +2976,26 @@ body {
 .eight-bottom {
     width: 92%;
     height: 50%;
-    position: relative;
+    /* position: relative; */
+    bottom: -3%;
+    margin-top: 9%;
     display: flex;
     justify-content: space-between;
 }
 
 /* 背景左 348*531 */
 .eight-b-l {
-    width: 54%;
+    width: 57%;
     height: 100%;
+    position: relative;
+    margin-top: -7%;
 }
 
 .eight-left-bg {
-    width: 54%;
-    height: 77%;
+    width: 100%;
+    /* height: 82%; */
     position: absolute;
-
     opacity: 0;
-
 }
 
 .eight-left-bg>img {
@@ -2993,11 +3010,10 @@ body {
 
 /* 左人 310*471 */
 .eight-left-people {
-    width: 48%;
+    width: 88%;
     height: 62%;
     position: absolute;
     opacity: 0;
-
 }
 
 .eight-left-people>img {
@@ -3037,26 +3053,27 @@ body {
 
 .eight-b-r {
     width: 40%;
-    height: 73%; 
-    /* 100 */
+    height: 73%;
     display: flex;
+    position: relative;
+    margin-top: -2%;
     flex-direction: column;
     justify-content: space-between;
 }
 
 /* 右背景 212*158 */
 .eight-right-bg1 {
-    width: 100%;
-    height: 32%;
-    /* 28 */
+    width: 92%;
+    /* height: 28%; */
     position: relative;
     opacity: 0;
-    top: 4%;
+    /* top: 4%; */
+    left: 7%;
 }
 
 .eight-right-bg1>img {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .eight-right-bgt {
@@ -3067,12 +3084,19 @@ body {
 
 /* 弹弓 226*179 */
 .dangong {
-    width: 100%;
+    /* width: 100%;
     height: 100%;
     position: absolute;
     right: 5.6%;
     top: 0%;
+    opacity: 0; */
+    width: 97%;
+    /* height: 100%; */
+    position: absolute;
+    right: -1.4%;
+    top: 3%;
     opacity: 0;
+    z-index: 0;
 }
 
 .dangong>img {
@@ -3083,23 +3107,25 @@ body {
 
 /* 右背景2 214*200 */
 .eight-right-bg2 {
-    width: 100%;
-    height: 38%;
+    width: 92%;
+    height: 54%;
     position: relative;
     opacity: 0;
-    top: 5%;
+    /* top: 5%; */
+    left: 7%;
 }
 
 .eight-right-bg2>img {
     width: 100%;
+    height: 91%;
 }
 
 /* 棉花 197*189 */
 .mianhua {
     width: 90%;
-    height: 18%;
+    /* height: 18%; */
     position: absolute;
-    top: 9%;
+    top: 5%;
     left: 6%;
     opacity: 0;
 }
@@ -3115,36 +3141,36 @@ body {
 
 /* 右背景下 214*102  */
 .eight-right-bg3 {
-    width: 100%;
-    height: 35%;
-    /* 18 */
+    width: 92%;
+    height: 34%;
     position: relative;
     opacity: 0;
-    top: 25%;
+    /* top: 2%; */
+    left: 7%;
 }
 
 .eight-right-bg3>img {
     width: 100%;
-    /* height: 100%; */
+    height: 80%;
 }
 
 /* 糖葫芦 145*109 198*85  */
 .candy {
-    width: 75%;
+    width: 59%;
     position: absolute;
-    right: 3%;
+    /* right: 3%; */
     TOP: 2%;
     opacity: 0;
-    left: 35%;
+    left: 47%;
 }
 
 .candy1 {
-    width: 98%;
+    width: 80%;
     position: absolute;
-    bottom: TOP;
+    /* bottom: TOP; */
     opacity: 0;
-    top: 37%;
-    left: 2%;
+    top: 22%;
+    left: 7%;
 }
 
 .candy>img {
@@ -3185,56 +3211,56 @@ body {
 
 /* 星星 60*60 19*18  23*24 13*12 12*12 13*12 */
 .eight-star1 {
-    width: 9%;
-    height: 5%;
+    width: 23%;
+    /* height: 5%; */
     position: absolute;
-    right: -3.5%;
-    bottom: 93%;
+    right: -8.5%;
+    margin-bottom: 86%;
     opacity: 0;
 }
 
 .eight-star2 {
-    width: 3%;
-    height: 1.7%;
+    width: 8%;
+    /* height: 1.7%; */
     position: absolute;
-    right: 33%;
-    bottom: 68%;
+    right: 76%;
+    margin-top: 76%;
     opacity: 0;
 }
 
 .eight-star3 {
-    width: 3.5%;
-    height: 2%;
+    width: 8.5%;
+    /* height: 2%; */
     position: absolute;
-    right: 12%;
-    bottom: 29%;
+    right: 10%;
+    margin-top: 162%;
     opacity: 0;
 }
 
 .eight-star4 {
-    width: 2%;
-    height: 1%;
+    width: 12%;
+    /* height: 1%; */
     position: absolute;
-    right: 38.8%;
-    bottom: 22%;
+    right: 21.8%;
+    margin-top: 155%;
     opacity: 0;
 }
 
 .eight-star5 {
-    width: 2.8%;
-    height: 1%;
+    width: 6.8%;
+    /* height: 1%; */
     position: absolute;
-    right: 5%;
-    bottom: 25%;
+    left: 5%;
+    margin-top: 188%;
     opacity: 0;
 }
 
 .eight-star6 {
-    width: 2%;
+    width: 8%;
     height: 1%;
     position: absolute;
-    right: 32%;
-    bottom: 28%;
+    left: 16%;
+    margin-top: 158%;
     opacity: 0;
 }
 
