@@ -1892,10 +1892,10 @@ ul{
 /* 气泡左 154*119 */
 .six-qipao1 {
     position: absolute;
-    width: 24%;
+    width: 28%;
     height: 11%;
     top: 10%;
-    left: 2%;
+    left: -3%;
     opacity: 0;
 
 }
@@ -1915,8 +1915,8 @@ ul{
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 11%;
-    left: 4%;
+    top: 24%;
+    left: 6%;
     opacity: 0;
 
 }
@@ -2030,9 +2030,9 @@ ul{
 /* 字 118*89 */
 .six-text3 {
     position: absolute;
-    left: 3%;
-    top: 4%;
-    width: 81%;
+    left: 5%;
+    top: 5%;
+    width: 78%;
 
 }
 
@@ -2068,8 +2068,8 @@ ul{
 /* 字 118*29 */
 .six-text4 {
     position: absolute;
-    top: 56%;
-    left: 11%;
+    top: 53%;
+    left: 12%;
     width: 70%;
     opacity: 0;
     /* animation: showtow 1s  backwards 10.5s ; */
@@ -2086,9 +2086,9 @@ ul{
 /* 字2 179*65*/
 .six-text5 {
     position: absolute;
-    width: 76%;
-    top: 47%;
-    left: 10%;
+    width: 73%;
+    top: 46%;
+    left: 13%;
     opacity: 0;
 }
 
@@ -3183,21 +3183,21 @@ ul{
 
 /* 花 43*26 42*26  */
 .eight-flower1 {
-    width: 8%;
+    width: 17%;
     height: 2%;
     position: absolute;
-    right: 36%;
-    bottom: 75%;
+    right: 81%;
+    bottom: 72%;
     opacity: 0;
 
 }
 
 .eight-flower2 {
-    width: 7%;
+    width: 16%;
     height: 2%;
     position: absolute;
     right: -3%;
-    bottom: 72%;
+    bottom: 65%;
     opacity: 0;
 }
 
