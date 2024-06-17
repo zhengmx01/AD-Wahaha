@@ -28,14 +28,14 @@ function toggleMusic() {
 function playBackgroundMusic() {
     bgMusic.play();
     react_root.classList.add("musicRotate");
-    musicStop.style.display = "none";
+    // musicStop.style.display = "none";
 }
 
 // 暂停音乐
 function pauseBackgroundMusic() {
     bgMusic.pause();
     react_root.classList.remove("musicRotate");
-    musicStop.style.display = "block";
+    // musicStop.style.display = "block";
 }
 
 
